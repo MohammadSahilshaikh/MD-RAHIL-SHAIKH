@@ -1,0 +1,452 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Life - Mohammad Sahil Shaikh</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Page Content */
+        .page-content {
+            padding: 120px 0 80px;
+            min-height: 100vh;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 50px;
+            color: #f8fafc;
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+        }
+
+        .page-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #3b82f6;
+            border-radius: 2px;
+        }
+
+        /* Image Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .gallery-item {
+            background: rgba(30, 41, 59, 0.7);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            border-color: #3b82f6;
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2);
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            padding: 15px;
+            text-align: center;
+            font-weight: 600;
+            color: #f8fafc;
+            font-size: 1.1rem;
+        }
+
+        /* Content Sections */
+        .content-section {
+            background: rgba(30, 41, 59, 0.7);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+        }
+
+        .content-section h2 {
+            color: #3b82f6;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .content-section h3 {
+            color: #fbbf24;
+            font-size: 1.5rem;
+            margin: 25px 0 15px;
+        }
+
+        .content-section p {
+            color: #cbd5e1;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .content-section ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .content-section li {
+            color: #cbd5e1;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .highlight-box {
+            background: rgba(59, 130, 246, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .highlight-box h4 {
+            color: #fbbf24;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        /* Back Button */
+        .back-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin-top: 30px;
+            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        .back-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+            background: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%);
+        }
+
+        .back-btn i {
+            margin-right: 8px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            
+            .nav-links {
+                gap: 20px;
+            }
+            
+            .page-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: rgba(15, 23, 42, 0.98);
+                flex-direction: column;
+                align-items: center;
+                padding-top: 40px;
+                transition: left 0.3s ease;
+                gap: 30px;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+            
+            .content-section {
+                padding: 25px;
+            }
+            
+            .footer-social-icons a {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-social-icons {
+                gap: 15px;
+            }
+            
+            .footer-social-icons a {
+                width: 45px;
+                height: 45px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Port<span>folio</span></a>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="profession.html">Profession</a></li>
+             
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="reach.html">Reach Us</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Content -->
+    <section class="page-content">
+        <div class="container">
+            <h1 class="page-title">College Life at MANUU</h1>
+            
+            <!-- Image Gallery -->
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" 
+                         alt="MANUU Campus" class="gallery-img">
+                    <div class="gallery-caption">MANUU Campus</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" 
+                         alt="Classroom Learning" class="gallery-img">
+                    <div class="gallery-caption">Classroom Learning</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=822&q=80" 
+                         alt="Library Study" class="gallery-img">
+                    <div class="gallery-caption">Library Study</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" 
+                         alt="College Events" class="gallery-img">
+                    <div class="gallery-caption">College Events</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=876&q=80" 
+                         alt="Group Projects" class="gallery-img">
+                    <div class="gallery-caption">Group Projects</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=864&q=80" 
+                         alt="Coding Lab" class="gallery-img">
+                    <div class="gallery-caption">Coding Lab</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" 
+                         alt="Research Work" class="gallery-img">
+                    <div class="gallery-caption">Research Work</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" 
+                         alt="Seminar Session" class="gallery-img">
+                    <div class="gallery-caption">Seminar Session</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1524178234883-043d5c3f3cf4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=901&q=80" 
+                         alt="Cultural Fest" class="gallery-img">
+                    <div class="gallery-caption">Cultural Fest</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" 
+                         alt="Sports Event" class="gallery-img">
+                    <div class="gallery-caption">Sports Event</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1519452639340-94f4d4cbf250?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80" 
+                         alt="Graduation Day" class="gallery-img">
+                    <div class="gallery-caption">Graduation Day</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" 
+                         alt="Friends & Memories" class="gallery-img">
+                    <div class="gallery-caption">Friends & Memories</div>
+                </div>
+            </div>
+            
+            <!-- Content Section -->
+            <div class="content-section">
+                <h2>My Journey at Maulana Azad National Urdu University</h2>
+                <p>My college life at Maulana Azad National Urdu University (MANUU) has been an incredible journey of learning, growth, and self-discovery. As a final year Diploma student in Information Technology, I've had the opportunity to immerse myself in the world of technology while also exploring various extracurricular activities.</p>
+                
+                <div class="highlight-box">
+                    <h4>Academic Profile</h4>
+                    <p><strong>Course:</strong> Diploma in Information Technology<br>
+                       <strong>University:</strong> Maulana Azad National Urdu University (MANUU)<br>
+                       <strong>Location:</strong> Hyderabad, Telangana<br>
+                       <strong>Current Year:</strong> Final Year<br>
+                       <strong>Duration:</strong> 3 Years (2022-2025)</p>
+                </div>
+                
+                <h3>Technical Skills Acquired</h3>
+                <p>Throughout my diploma program, I have gained expertise in various programming languages and technologies:</p>
+                
+                <ul>
+                    <li><strong>C Programming:</strong> Mastered fundamental programming concepts, data structures, and algorithms</li>
+                    <li><strong>Java Programming:</strong> Developed object-oriented programming skills and application development</li>
+                    <li><strong>HTML5 & CSS3:</strong> Created responsive web designs and user interfaces</li>
+                    <li><strong>JavaScript:</strong> Built interactive web applications and learned modern frameworks</li>
+                    <li><strong>Web Development:</strong> Full-stack development including frontend and backend technologies</li>
+                    <li><strong>Database Management:</strong> SQL, database design, and management systems</li>
+                    <li><strong>Software Engineering:</strong> Project lifecycle, testing, and deployment methodologies</li>
+                </ul>
+                
+                <h3>Academic Achievements</h3>
+                <ul>
+                    <li>Maintained excellent academic record throughout the course</li>
+                    <li>Active participation in classroom discussions and technical projects</li>
+                    <li>Successfully completed all lab sessions with hands-on experience</li>
+                    <li>Collaborated with peers on various technical assignments and group projects</li>
+                    <li>Attended numerous workshops and seminars on emerging technologies</li>
+                    <li>Participated in faculty-led research projects and case studies</li>
+                </ul>
+                
+                <h3>Extracurricular Involvement</h3>
+                <p>Beyond academics, I actively participated in various college activities:</p>
+                
+                <ul>
+                    <li><strong>Technical Clubs:</strong> Member of coding and development clubs</li>
+                    <li><strong>Cultural Activities:</strong> Active participant in drama, mime, and cultural events</li>
+                    <li><strong>NCC:</strong> Cadet with participation in national-level camps</li>
+                    <li><strong>Workshops:</strong> Attended technical workshops and hackathons</li>
+                    <li><strong>Event Management:</strong> Volunteered for college fest organization</li>
+                </ul>
+                
+                <h3>Future Goals</h3>
+                <p>As I approach the completion of my diploma, I aim to:</p>
+                
+                <ul>
+                    <li>Pursue higher education in Computer Science or related fields</li>
+                    <li>Specialize in full-stack web development and software engineering</li>
+                    <li>Build a career as a professional web developer</li>
+                    <li>Contribute to open-source projects and technological innovations</li>
+                    <li>Combine my technical skills with creative pursuits in digital media</li>
+                </ul>
+                
+                <p>My college experience at MANUU has not only provided me with technical knowledge but also helped me develop essential soft skills, leadership qualities, and a strong work ethic that will serve me well in my professional career.</p>
+                
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+   
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Add scroll effect to header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.2)';
+                header.style.background = 'rgba(15, 23, 42, 0.95)';
+            } else {
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+                header.style.background = 'rgba(15, 23, 42, 0.9)';
+            }
+        });
+    </script>
+</body>
+</html>
+

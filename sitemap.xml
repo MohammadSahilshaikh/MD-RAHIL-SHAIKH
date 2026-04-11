@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ======= HOME PAGE (HIGHEST PRIORITY) ======= -->
+  <url>
+    <loc>https://aapkiwebsite.com/</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://aapkiwebsite.com/Sahil.jpg</image:loc>
+      <image:title>Mohammad Sahil Shaikh - Web Developer & Theater Artist</image:title>
+      <image:caption>Official website of Mohammad Sahil Shaikh from Hyderabad</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ======= ABOUT PAGE ======= -->
+  <url>
+    <loc>https://aapkiwebsite.com/#about</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ======= TRAVEL PAGES ======= -->
+  <url>
+    <loc>https://aapkiwebsite.com/delhi.html</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aapkiwebsite.com/bangalore.html</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aapkiwebsite.com/gujarat.html</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aapkiwebsite.com/chennai.html</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aapkiwebsite.com/kolkata.html</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aapkiwebsite.com/hyderabad.html</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aapkiwebsite.com/bihar.html</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ======= PROJECT PAGES ======= -->
+  <url>
+    <loc>https://aapkiwebsite.com/ecommerce-website.html</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aapkiwebsite.com/portfolio-website.html</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aapkiwebsite.com/finance-dashboard.html</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aapkiwebsite.com/chat-application.html</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aapkiwebsite.com/weather-app.html</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aapkiwebsite.com/task-management.html</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ======= PROFESSION PAGES (IMPORTANT) ======= -->
+  <url>
+    <loc>https://aapkiwebsite.com/web-development.html</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aapkiwebsite.com/programming.html</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aapkiwebsite.com/social-media-management.html</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- ======= THEATER ARTIST PAGE (HIGH PRIORITY FOR YOUR QUERY) ======= -->
+  <url>
+    <loc>https://aapkiwebsite.com/theater-artist.html</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://aapkiwebsite.com/baa%20santi%201.jpeg</image:loc>
+      <image:title>Mohammad Sahil Shaikh - Theater Artist & Mime Performer</image:title>
+      <image:caption>National level mime winner, South Zone first position</image:caption>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://aapkiwebsite.com/videography-photography.html</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aapkiwebsite.com/ncc.html</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ======= ACHIEVEMENTS PAGES (HIGH PRIORITY) ======= -->
+  <url>
+    <loc>https://aapkiwebsite.com/hackathon-2025.html</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://aapkiwebsite.com/cultural-achievements.html</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://aapkiwebsite.com/ncc-achievements.html</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aapkiwebsite.com/videography-award.html</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ======= REACH/CONTACT PAGE ======= -->
+  <url>
+    <loc>https://aapkiwebsite.com/#reach</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ======= ADDITIONAL IMAGES FOR BETTER VISIBILITY ======= -->
+  <url>
+    <loc>https://aapkiwebsite.com/</loc>
+    <image:image>
+      <image:loc>https://aapkiwebsite.com/sahil6.jpeg</image:loc>
+      <image:title>Mohammad Sahil Shaikh - University Event</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://aapkiwebsite.com/sahil22.jpeg</image:loc>
+      <image:title>Mohammad Sahil Shaikh - NCC Cadet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://aapkiwebsite.com/mime2.jpeg</image:loc>
+      <image:title>Mohammad Sahil Shaikh - Mime Performance National Level</image:title>
+    </image:image>
+  </url>
+
+</urlset>
