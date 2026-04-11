@@ -2384,14 +2384,15 @@
 
             // Get form data
             const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
+                from_name: document.getElementById('name').value,
+                from_email: document.getElementById('email').value,
                 subject: document.getElementById('subject').value,
-                message: document.getElementById('message').value
+                message: document.getElementById('message').value,
+                to_email: "sahilfact549@gmail.com"
             };
 
             // Simple validation
-            if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+            if (!formData.from_name || !formData.from_email || !formData.subject || !formData.message) {
                 messageStatus.className = "message-status error";
                 messageStatus.innerHTML = "Please fill in all fields";
                 messageStatus.style.display = "block";
@@ -2401,25 +2402,37 @@
                 return;
             }
 
-            // Simulate form submission (replace with actual form submission)
-            setTimeout(() => {
-                // Show success message
-                messageStatus.className = "message-status success";
-                messageStatus.innerHTML = "Message sent successfully! I will get back to you within 24 hours.";
+            if (typeof emailjs !== 'undefined') {
+                emailjs.send("service_8ln5mu9", "template_ihpt477", formData)
+                .then(function(response){
+                    messageStatus.className = "message-status success";
+                    messageStatus.innerHTML = "Message sent successfully! I will get back to you within 24 hours.";
+                    messageStatus.style.display = "block";
+                    
+                    document.getElementById('contactForm').reset();
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                    
+                    setTimeout(() => {
+                        messageStatus.style.display = "none";
+                    }, 5000);
+                }, function(error){
+                    messageStatus.className = "message-status error";
+                    messageStatus.innerHTML = "Failed to send message: " + JSON.stringify(error);
+                    messageStatus.style.display = "block";
+                    console.log('EmailJS Error:', error);
+                    
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                });
+            } else {
+                messageStatus.className = "message-status error";
+                messageStatus.innerHTML = "Email service not ready. Refresh and try again.";
                 messageStatus.style.display = "block";
-
-                // Reset form
-                document.getElementById('contactForm').reset();
-
-                // Reset button
+                
                 submitBtn.innerHTML = originalBtnText;
                 submitBtn.disabled = false;
-
-                // Hide message after 5 seconds
-                setTimeout(() => {
-                    messageStatus.style.display = "none";
-                }, 5000);
-            }, 1500);
+            }
         });
 
         // Form validation on blur
@@ -2437,8 +2450,6 @@
                 this.style.borderColor = '#3b82f6';
             });
         });
-        src = "https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
-        src = "script.js"
 
         // ======= INITIALIZE =======
         // Set initial active nav link
@@ -2713,6 +2724,12 @@
             const diff = touchStartX - e.changedTouches[0].clientX;
             if (Math.abs(diff) > 50) { diff > 0 ? slideNext() : slidePrev(); resetInterval(); }
         }, { passive: true });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("6zFnZ303yp49soupx");
+        })();
     </script>
 </body>
 
