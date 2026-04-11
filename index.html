@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- 🔥 SEO META TAGS (ADDED BY SAHL) -->
-    <meta name="description" content="Mohammad Sahil Shaikh - IT Student, Web Developer, Video Editor, Photographer, Theater Artist aur National Winner. MANUU, Hyderabad se official website. Dekhein projects, achievements aur social media profiles.">
-    <meta name="keywords" content="Mohammad Sahil Shaikh, Sahil Shaikh, IT Student, Web Developer Hyderabad, Video Editor, Photographer, Theater Artist, National Winner, Mime Artist, MANUU, Hyderabad, NCC Cadet">
+    <meta name="description"
+        content="Mohammad Sahil Shaikh - IT Student, Web Developer, Video Editor, Photographer, Theater Artist aur National Winner. MANUU, Hyderabad se official website. Dekhein projects, achievements aur social media profiles.">
+    <meta name="keywords"
+        content="Mohammad Sahil Shaikh, Sahil Shaikh, IT Student, Web Developer Hyderabad, Video Editor, Photographer, Theater Artist, National Winner, Mime Artist, MANUU, Hyderabad, NCC Cadet">
     <meta name="author" content="Mohammad Sahil Shaikh">
     <link rel="canonical" href="https://aapkiwebsite.com">
 
     <!-- 📱 Open Graph Tags (Facebook, WhatsApp, LinkedIn) -->
     <meta property="og:title" content="Mohammad Sahil Shaikh - IT Student & National Award Winning Theater Artist">
-    <meta property="og:description" content="Mohammad Sahil Shaikh ka official website. Web Developer, Video Editor, NCC Cadet aur National Level Mime Winner. Hyderabad se hoon.">
+    <meta property="og:description"
+        content="Mohammad Sahil Shaikh ka official website. Web Developer, Video Editor, NCC Cadet aur National Level Mime Winner. Hyderabad se hoon.">
     <meta property="og:image" content="https://aapkiwebsite.com/Sahil.jpg">
     <meta property="og:url" content="https://aapkiwebsite.com">
     <meta property="og:type" content="website">
@@ -18,7 +22,8 @@
     <!-- 🐦 Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Mohammad Sahil Shaikh - IT Student & Theater Artist">
-    <meta name="twitter:description" content="National winner in Mime, Web Developer, Photographer. Dekhein meri journey.">
+    <meta name="twitter:description"
+        content="National winner in Mime, Web Developer, Photographer. Dekhein meri journey.">
     <meta name="twitter:image" content="https://aapkiwebsite.com/Sahil.jpg">
 
     <!-- 🧠 Structured Data (JSON-LD) - Google ke liye sabse important -->
@@ -92,7 +97,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohammad Sahil Shaikh - Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="style.css">
     <style>
         /* ======= BASE STYLES ======= */
@@ -312,11 +318,30 @@
         }
 
         @keyframes rotateProfessions {
-            0%, 20% { transform: translateY(0); }
-            25%, 45% { transform: translateY(-40px); }
-            50%, 70% { transform: translateY(-80px); }
-            75%, 95% { transform: translateY(-120px); }
-            100% { transform: translateY(-160px); }
+
+            0%,
+            20% {
+                transform: translateY(0);
+            }
+
+            25%,
+            45% {
+                transform: translateY(-40px);
+            }
+
+            50%,
+            70% {
+                transform: translateY(-80px);
+            }
+
+            75%,
+            95% {
+                transform: translateY(-120px);
+            }
+
+            100% {
+                transform: translateY(-160px);
+            }
         }
 
         /* Profile Image with Profession Badge */
@@ -368,9 +393,17 @@
         }
 
         @keyframes badgePulse {
-            0% { box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4); }
-            50% { box-shadow: 0 5px 20px rgba(59, 130, 246, 0.7); }
-            100% { box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4); }
+            0% {
+                box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 5px 20px rgba(59, 130, 246, 0.7);
+            }
+
+            100% {
+                box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+            }
         }
 
         /* Action Buttons */
@@ -439,29 +472,34 @@
             height: 550px;
             position: relative;
             overflow: hidden;
-            margin-top: 70px; /* offset for fixed header */
+            margin-top: 70px;
+            /* offset for fixed header */
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             border-bottom: 3px solid #3b82f6;
             display: flex;
             align-items: center;
         }
+
         .slider-track {
             display: flex;
             height: 100%;
             transition: transform 0.5s ease-in-out;
             width: 100%;
         }
+
         .slider-slide {
             min-width: 100%;
             height: 100%;
             position: relative;
         }
+
         .slider-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             object-position: top;
         }
+
         .slider-btn {
             position: absolute;
             top: 50%;
@@ -480,25 +518,44 @@
             font-size: 1.2rem;
             transition: all 0.3s;
         }
+
         .slider-btn:hover {
             background: #3b82f6;
             color: white;
             transform: translateY(-50%) scale(1.1);
         }
+
         .slider-btn.prev {
             left: 20px;
         }
+
         .slider-btn.next {
             right: 20px;
         }
 
         @media (max-width: 768px) {
-            .top-slider { height: 250px; margin-top: 80px; }
-            .slider-btn { width: 40px; height: 40px; font-size: 1rem; }
+            .top-slider {
+                height: 250px;
+                margin-top: 80px;
+            }
+
+            .slider-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
         }
+
         @media (max-width: 480px) {
-            .top-slider { height: 200px; }
-            .slider-btn { width: 35px; height: 35px; font-size: 0.9rem; }
+            .top-slider {
+                height: 200px;
+            }
+
+            .slider-btn {
+                width: 35px;
+                height: 35px;
+                font-size: 0.9rem;
+            }
         }
 
         /* Admin Button Styles */
@@ -1230,6 +1287,7 @@
                 opacity: 0;
                 transform: translateX(-50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -1241,6 +1299,7 @@
                 opacity: 0;
                 transform: translateX(50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -1284,11 +1343,11 @@
                 grid-template-columns: 1fr;
                 gap: 30px;
             }
-            
+
             .section-title {
                 font-size: 2.5rem;
             }
-            
+
             .marquee-img {
                 width: 180px;
                 height: 110px;
@@ -1353,22 +1412,22 @@
             .about-stats {
                 grid-template-columns: 1fr 1fr;
             }
-            
+
             .experience-section {
                 padding: 25px;
             }
-            
+
             .footer-social-icons a {
                 width: 50px;
                 height: 50px;
                 font-size: 1.3rem;
             }
-            
+
             .marquee-img {
                 width: 150px;
                 height: 90px;
             }
-            
+
             .header-marquee {
                 margin-top: 60px;
                 padding: 15px 0;
@@ -1383,7 +1442,7 @@
             .achievements-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .project-img-container,
             .profession-img-container,
             .achievement-img-container {
@@ -1418,26 +1477,36 @@
             .section-title {
                 font-size: 2rem;
             }
-            
+
             .about-text-content h3 {
                 font-size: 1.6rem;
             }
-            
-            .footer-social-icons { gap: 12px; }
-            .footer-social-icons a { width: 42px; height: 42px; font-size: 1.1rem; }
-            .about-stats { grid-template-columns: 1fr 1fr; }
-            
+
+            .footer-social-icons {
+                gap: 12px;
+            }
+
+            .footer-social-icons a {
+                width: 42px;
+                height: 42px;
+                font-size: 1.1rem;
+            }
+
+            .about-stats {
+                grid-template-columns: 1fr 1fr;
+            }
+
             .marquee-img {
                 width: 130px;
                 height: 80px;
                 margin: 0 10px;
             }
-            
+
             .header-marquee {
                 margin-top: 50px;
                 padding: 10px 0;
             }
-            
+
             .marquee-container {
                 height: 100px;
             }
@@ -1482,6 +1551,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Header & Navigation -->
     <header>
@@ -1517,7 +1587,7 @@
             <div class="home-content">
                 <div class="home-text">
                     <h1>Hello, I'm <span style="color: #3b82f6;">Mohammad Sahil Shaikh</span></h1>
-                    <h2>IT Student & 
+                    <h2>IT Student &
                         <div class="profession-rotator">
                             <ul class="profession-list">
                                 <li>Web Developer</li>
@@ -1529,17 +1599,23 @@
                             </ul>
                         </div>
                     </h2>
-                    <p>A passionate IT professional from Hyderabad with expertise in multiple creative and technical domains. I specialize in creating digital solutions that blend technology with creativity to deliver exceptional results.</p>
-                    
+                    <p>A passionate IT professional from Hyderabad with expertise in multiple creative and technical
+                        domains. I specialize in creating digital solutions that blend technology with creativity to
+                        deliver exceptional results.</p>
+
                     <!-- Social Icons and Download CV Button -->
                     <div class="action-buttons">
                         <div class="home-social-icons">
-                            <a href="https://www.instagram.com/arman_shaikh_549?igsh=ZDlqc2w3ZXEzOTRx" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-                            <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.linkedin.com/in/mohammad-sahil-shaikh-493a1929b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="https://github.com" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://www.instagram.com/arman_shaikh_549?igsh=ZDlqc2w3ZXEzOTRx" target="_blank"
+                                title="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://facebook.com" target="_blank" title="Facebook"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.linkedin.com/in/mohammad-sahil-shaikh-493a1929b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com" target="_blank" title="GitHub"><i
+                                    class="fab fa-github"></i></a>
                         </div>
-                        
+
                         <!-- Only Download CV Button -->
                         <a href="Sahil CV.pdf" class="download-cv-btn" download="Mohammad_Sahil_Shaikh_CV">
                             <i class="fas fa-download"></i> Download My CV
@@ -1550,39 +1626,44 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="profile-container">
                     <div class="profile-image-wrapper">
                         <img src="Sahil.jpg" alt="Mohammad Sahil Shaikh" class="profile-img" loading="eager">
                         <div class="profession-badge" id="professionBadge">Web Developer</div>
-                    </div>      </div>
+                    </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="page-section">
         <div class="container">
-            
+
             <h2 class="section-title">About Me</h2>
-            
+
             <!-- About Content -->
             <div class="about-content">
                 <div class="about-text-content">
                     <h3>Mohammad Sahil Shaikh</h3>
                     <p>
-                        I am a Diploma in Information Technology student at Maulana Azad National Urdu University (MANUU), Hyderabad. 
+                        I am a Diploma in Information Technology student at Maulana Azad National Urdu University
+                        (MANUU), Hyderabad.
                         I am passionate about technology, web development, and learning new skills beyond academics.
                     </p>
                     <p>
-                        Along with my technical journey, I have actively represented my university in various national and zonal events. 
-                        I participated in Hackathon 2025 and was selected at the national level. I am also deeply involved in cultural activities, 
-                        where I have achieved multiple awards including second position in Mime and Play at the South East Zone level, 
+                        Along with my technical journey, I have actively represented my university in various national
+                        and zonal events.
+                        I participated in Hackathon 2025 and was selected at the national level. I am also deeply
+                        involved in cultural activities,
+                        where I have achieved multiple awards including second position in Mime and Play at the South
+                        East Zone level,
                         and first position in Mime at the South Zone level, qualifying for the national competition.
                     </p>
                 </div>
-                
+
                 <div class="about-stats">
                     <div class="stat-item">
                         <div class="stat-number">3+</div>
@@ -1602,132 +1683,56 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- College Life Section -->
-            <div class="experience-section">
-                <h3>College Life at MANUU</h3>
-                <p>I am a final year Diploma student in Information Technology at Maulana Azad National Urdu University (MANUU), Hyderabad. I have learned multiple programming languages and technologies including C, Java, HTML, CSS, and JavaScript.</p>
-                
-                <div class="experience-summary">
-                    <h4>Technical Skills Acquired:</h4>
-                    <ul>
-                        <li>C Programming Language</li>
-                        <li>Java Programming</li>
-                        <li>HTML5 & CSS3</li>
-                        <li>JavaScript & ES6+</li>
-                        <li>Web Development</li>
-                        <li>Database Management</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- Cultural Activities Section -->
-            <div class="experience-section">
-                <h3>Cultural Activities</h3>
-                <p>Active participation in cultural events has been an integral part of my college life. I've represented my university in various cultural competitions and events at different levels.</p>
-                
-                <div class="experience-summary">
-                    <h4>Key Achievements:</h4>
-                    <ul>
-                        <li>Second position in Mime and Play at South East Zone level</li>
-                        <li>First position in Mime at South Zone level</li>
-                        <li>Qualified for national competition in Mime</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- NCC Section -->
-            <div class="experience-section">
-                <h3>National Cadet Corps (NCC)</h3>
-                <p>Being an NCC cadet has been one of the most rewarding experiences of my college life. It has taught me discipline, leadership, and national pride.</p>
-                
-                <div class="experience-summary">
-                    <h4>Training and Camps:</h4>
-                    <ul>
-                        <li>Participated in Annual Training Camp (ATC)</li>
-                        <li>Attended North East Region (NER) Trek Camp</li>
-                        <li>Completed basic military training</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- Tech Events Section -->
-            <div class="experience-section">
-                <h3>Technical Events and Hackathons</h3>
-                <p>Active participation in technical events has been crucial for my skill development and exposure to the latest technologies.</p>
-                
-                <div class="experience-summary">
-                    <h4>Major Events:</h4>
-                    <ul>
-                        <li>Participated in Hackathon 2025</li>
-                        <li>Selected at national level in hackathon</li>
-                        <li>Attended various tech workshops and seminars</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- Videography Section -->
-            <div class="experience-section">
-                <h3>Videography & Editing Experience</h3>
-                <p>I have been doing videography for 2.6 years at university level, creating reels and promotional videos for various events.</p>
-                
-                <div class="experience-summary">
-                    <h4>Experience Highlights:</h4>
-                    <ul>
-                        <li>2.6 years of videography experience at university</li>
-                        <li>Worked on International Kite Festival</li>
-                        <li>Won Best Photographer & Videographer Award in Nagaland</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
     </section>
 
     <!-- Travel Section -->
     <section id="travel" class="page-section">
         <div class="container">
 
-            
+
             <h2 class="section-title">Travel Experiences</h2>
-            
-            <p style="text-align: center; color: #cbd5e1; font-size: 1.1rem; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
-                I have traveled to various cities across India, experiencing different cultures, famous places, and local cuisines. Each journey has been a unique learning experience and an opportunity to explore the diversity of our country.
+
+            <p
+                style="text-align: center; color: #cbd5e1; font-size: 1.1rem; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                I have traveled to various cities across India, experiencing different cultures, famous places, and
+                local cuisines. Each journey has been a unique learning experience and an opportunity to explore the
+                diversity of our country.
             </p>
-            
+
             <div class="travel-grid">
                 <a href="delhi.html" class="travel-card">
-                    <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" 
-                         alt="Delhi" class="travel-img">
+                    <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+                        alt="Delhi" class="travel-img">
                     <div class="travel-name">Delhi</div>
                 </a>
                 <a href="bangalore.html" class="travel-card">
-                    <img src="https://bangaloretourism.in/images/v2/headers/bangalore-1-day-tour-packages-bangalore-header-bangalore-tourism-cr-mbell1975.jpg" 
-                         alt="Bangalore" class="travel-img">
+                    <img src="https://bangaloretourism.in/images/v2/headers/bangalore-1-day-tour-packages-bangalore-header-bangalore-tourism-cr-mbell1975.jpg"
+                        alt="Bangalore" class="travel-img">
                     <div class="travel-name">Bangalore</div>
                 </a>
                 <a href="gujarat.html" class="travel-card">
-                    <img src="https://www.kutchtourguide.com/blog/wp-content/uploads/2015/01/Vijay_Vilas_Palace.jpg" 
-                         alt="Gujarat" class="travel-img">
+                    <img src="https://www.kutchtourguide.com/blog/wp-content/uploads/2015/01/Vijay_Vilas_Palace.jpg"
+                        alt="Gujarat" class="travel-img">
                     <div class="travel-name">Gujarat</div>
                 </a>
                 <a href="chennai.html" class="travel-card">
-                    <img src="https://media.licdn.com/dms/image/v2/C4E12AQGmIluMk0G6GA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1520238944692?e=2147483647&v=beta&t=pYZiKqRVUWP0vq0UDPY_-kRGwRbYQUYK1sgBoBjVib4" 
-                         alt="Chennai" class="travel-img">
+                    <img src="https://media.licdn.com/dms/image/v2/C4E12AQGmIluMk0G6GA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1520238944692?e=2147483647&v=beta&t=pYZiKqRVUWP0vq0UDPY_-kRGwRbYQUYK1sgBoBjVib4"
+                        alt="Chennai" class="travel-img">
                     <div class="travel-name">Chennai</div>
                 </a>
                 <a href="kolkata.html" class="travel-card">
-                    <img src="https://cdn.pixabay.com/photo/2017/06/12/08/29/victoria-memorial-2394784_1280.jpg" 
-                         alt="Kolkata" class="travel-img">
+                    <img src="https://cdn.pixabay.com/photo/2017/06/12/08/29/victoria-memorial-2394784_1280.jpg"
+                        alt="Kolkata" class="travel-img">
                     <div class="travel-name">Kolkata</div>
                 </a>
                 <a href="hyderabad.html" class="travel-card">
-                    <img src="https://as1.ftcdn.net/v2/jpg/03/97/74/64/1000_F_397746410_YP1kxMSzQUhzDrlXCGu9wpKeDakisHjH.jpg" 
-                         alt="Hyderabad" class="travel-img">
+                    <img src="https://as1.ftcdn.net/v2/jpg/03/97/74/64/1000_F_397746410_YP1kxMSzQUhzDrlXCGu9wpKeDakisHjH.jpg"
+                        alt="Hyderabad" class="travel-img">
                     <div class="travel-name">Hyderabad</div>
                 </a>
                 <a href="bihar.html" class="travel-card">
-                    <img src="https://i.pinimg.com/736x/d4/0c/e3/d40ce388bbde6e0c4160433ddd132e74.jpg" 
-                         alt="Bihar" class="travel-img">
+                    <img src="https://i.pinimg.com/736x/d4/0c/e3/d40ce388bbde6e0c4160433ddd132e74.jpg" alt="Bihar"
+                        class="travel-img">
                     <div class="travel-name">Bihar</div>
                 </a>
             </div>
@@ -1738,15 +1743,15 @@
     <section id="projects" class="page-section">
         <div class="container">
 
-            
+
             <h2 class="section-title">My Projects</h2>
-            
+
             <div class="projects-grid">
                 <!-- Project 1: E-Commerce Website -->
                 <a href="ecommerce-website.html" class="project-card">
                     <div class="project-img-container">
-                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" 
-                             alt="E-Commerce Website" class="project-img">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+                            alt="E-Commerce Website" class="project-img">
                         <div class="project-overlay">
                             <div>
                                 <h3 class="project-title">E-Commerce Website</h3>
@@ -1756,7 +1761,8 @@
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">E-Commerce Website</h3>
-                        <p class="project-description">A full-featured online shopping platform with user authentication, product catalog, shopping cart, and payment gateway integration.</p>
+                        <p class="project-description">A full-featured online shopping platform with user
+                            authentication, product catalog, shopping cart, and payment gateway integration.</p>
                         <div class="project-tech">
                             <span class="tech-tag">HTML5</span>
                             <span class="tech-tag">CSS3</span>
@@ -1769,12 +1775,12 @@
                         </div>
                     </div>
                 </a>
-                
+
                 <!-- Project 2: Portfolio Website -->
                 <a href="portfolio-website.html" class="project-card">
                     <div class="project-img-container">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" 
-                             alt="Portfolio Website" class="project-img">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+                            alt="Portfolio Website" class="project-img">
                         <div class="project-overlay">
                             <div>
                                 <h3 class="project-title">Portfolio Website</h3>
@@ -1784,7 +1790,8 @@
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Portfolio Website</h3>
-                        <p class="project-description">Personal portfolio website showcasing projects, skills, and achievements with responsive design and smooth animations.</p>
+                        <p class="project-description">Personal portfolio website showcasing projects, skills, and
+                            achievements with responsive design and smooth animations.</p>
                         <div class="project-tech">
                             <span class="tech-tag">HTML5</span>
                             <span class="tech-tag">CSS3</span>
@@ -1797,12 +1804,12 @@
                         </div>
                     </div>
                 </a>
-                
+
                 <!-- Project 3: Finance Dashboard -->
                 <a href="finance-dashboard.html" class="project-card">
                     <div class="project-img-container">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" 
-                             alt="Finance Dashboard" class="project-img">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+                            alt="Finance Dashboard" class="project-img">
                         <div class="project-overlay">
                             <div>
                                 <h3 class="project-title">Finance Dashboard</h3>
@@ -1812,7 +1819,8 @@
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Finance Dashboard</h3>
-                        <p class="project-description">Financial analytics dashboard with data visualization, expense tracking, and reporting features for financial management.</p>
+                        <p class="project-description">Financial analytics dashboard with data visualization, expense
+                            tracking, and reporting features for financial management.</p>
                         <div class="project-tech">
                             <span class="tech-tag">React.js</span>
                             <span class="tech-tag">Chart.js</span>
@@ -1825,12 +1833,12 @@
                         </div>
                     </div>
                 </a>
-                
+
                 <!-- Project 4: Chat Application -->
                 <a href="chat-application.html" class="project-card">
                     <div class="project-img-container">
-                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" 
-                             alt="Chat Application" class="project-img">
+                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+                            alt="Chat Application" class="project-img">
                         <div class="project-overlay">
                             <div>
                                 <h3 class="project-title">Chat Application</h3>
@@ -1840,7 +1848,8 @@
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Chat Application</h3>
-                        <p class="project-description">Real-time chat application with WebSocket technology, user authentication, and group chat functionality.</p>
+                        <p class="project-description">Real-time chat application with WebSocket technology, user
+                            authentication, and group chat functionality.</p>
                         <div class="project-tech">
                             <span class="tech-tag">React.js</span>
                             <span class="tech-tag">Socket.io</span>
@@ -1853,12 +1862,12 @@
                         </div>
                     </div>
                 </a>
-                
+
                 <!-- Project 5: Weather App -->
                 <a href="weather-app.html" class="project-card">
                     <div class="project-img-container">
-                        <img src="https://play-lh.googleusercontent.com/Rfmept84-BU-gOZ97XkERK3ArAjzE9WawsNwrzOjf3IzVx5Lsum3iW0KLFbNHY1omQ=w526-h296-rw" 
-                             alt="Weather App" class="project-img">
+                        <img src="https://play-lh.googleusercontent.com/Rfmept84-BU-gOZ97XkERK3ArAjzE9WawsNwrzOjf3IzVx5Lsum3iW0KLFbNHY1omQ=w526-h296-rw"
+                            alt="Weather App" class="project-img">
                         <div class="project-overlay">
                             <div>
                                 <h3 class="project-title">Weather App</h3>
@@ -1868,7 +1877,8 @@
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Weather App</h3>
-                        <p class="project-description">Weather forecasting application providing real-time weather updates and 7-day forecasts using weather API.</p>
+                        <p class="project-description">Weather forecasting application providing real-time weather
+                            updates and 7-day forecasts using weather API.</p>
                         <div class="project-tech">
                             <span class="tech-tag">HTML5</span>
                             <span class="tech-tag">CSS3</span>
@@ -1881,12 +1891,12 @@
                         </div>
                     </div>
                 </a>
-                
+
                 <!-- Project 6: Task Management System -->
                 <a href="task-management.html" class="project-card">
                     <div class="project-img-container">
-                        <img src="https://phiedge.co.in/wp-content/uploads/2025/08/Task-Management-Software.jpg" 
-                             alt="Task Management System" class="project-img">
+                        <img src="https://phiedge.co.in/wp-content/uploads/2025/08/Task-Management-Software.jpg"
+                            alt="Task Management System" class="project-img">
                         <div class="project-overlay">
                             <div>
                                 <h3 class="project-title">Task Management System</h3>
@@ -1896,7 +1906,8 @@
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Task Management System</h3>
-                        <p class="project-description">Comprehensive task management system with drag-drop functionality, team collaboration, and progress tracking.</p>
+                        <p class="project-description">Comprehensive task management system with drag-drop
+                            functionality, team collaboration, and progress tracking.</p>
                         <div class="project-tech">
                             <span class="tech-tag">React.js</span>
                             <span class="tech-tag">Redux</span>
@@ -1917,15 +1928,15 @@
     <section id="profession" class="page-section">
         <div class="container">
 
-            
+
             <h2 class="section-title">My Profession</h2>
-            
+
             <div class="profession-grid">
                 <!-- Web Development -->
                 <a href="web-development.html" class="profession-card">
                     <div class="profession-img-container">
-                        <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" 
-                             alt="Web Development" class="profession-img">
+                        <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+                            alt="Web Development" class="profession-img">
                         <div class="profession-overlay">
                             <div>
                                 <h3 class="profession-card-title">Web Development</h3>
@@ -1935,7 +1946,8 @@
                     </div>
                     <div class="profession-content">
                         <h3 class="profession-card-title">Web Development</h3>
-                        <p class="profession-description">Specializing in front-end and back-end web development using modern technologies to create responsive, user-friendly websites and web applications.</p>
+                        <p class="profession-description">Specializing in front-end and back-end web development using
+                            modern technologies to create responsive, user-friendly websites and web applications.</p>
                         <div class="profession-skills">
                             <span class="skill-tag">HTML5</span>
                             <span class="skill-tag">CSS3</span>
@@ -1948,12 +1960,12 @@
                         </div>
                     </div>
                 </a>
-                
+
                 <!-- Programming -->
                 <a href="programming.html" class="profession-card">
                     <div class="profession-img-container">
-                        <img src="https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" 
-                             alt="Programming" class="profession-img">
+                        <img src="https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+                            alt="Programming" class="profession-img">
                         <div class="profession-overlay">
                             <div>
                                 <h3 class="profession-card-title">Programming</h3>
@@ -1963,7 +1975,8 @@
                     </div>
                     <div class="profession-content">
                         <h3 class="profession-card-title">Programming</h3>
-                        <p class="profession-description">Experienced in multiple programming languages developing algorithms, solving complex problems, and building efficient software solutions.</p>
+                        <p class="profession-description">Experienced in multiple programming languages developing
+                            algorithms, solving complex problems, and building efficient software solutions.</p>
                         <div class="profession-skills">
                             <span class="skill-tag">C Programming</span>
                             <span class="skill-tag">Python</span>
@@ -1976,12 +1989,12 @@
                         </div>
                     </div>
                 </a>
-                
+
                 <!-- Social Media Management -->
                 <a href="social-media-management.html" class="profession-card">
                     <div class="profession-img-container">
-                        <img src="https://th.bing.com/th/id/OIP.vTMd7y4Fa9PNB_jxTVL4NAHaEK?w=328&h=184&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" 
-                             alt="Social Media Management" class="profession-img">
+                        <img src="https://th.bing.com/th/id/OIP.vTMd7y4Fa9PNB_jxTVL4NAHaEK?w=328&h=184&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+                            alt="Social Media Management" class="profession-img">
                         <div class="profession-overlay">
                             <div>
                                 <h3 class="profession-card-title">Social Media Management</h3>
@@ -1991,7 +2004,8 @@
                     </div>
                     <div class="profession-content">
                         <h3 class="profession-card-title">Social Media Management</h3>
-                        <p class="profession-description">Managing and strategizing social media presence, content creation, and digital marketing to build brand awareness and engage audiences.</p>
+                        <p class="profession-description">Managing and strategizing social media presence, content
+                            creation, and digital marketing to build brand awareness and engage audiences.</p>
                         <div class="profession-skills">
                             <span class="skill-tag">Content Strategy</span>
                             <span class="skill-tag">Audience Engagement</span>
@@ -2003,7 +2017,7 @@
                         </div>
                     </div>
                 </a>
-                
+
                 <!-- Theater Artist -->
                 <a href="theater-artist.html" class="profession-card">
                     <div class="profession-img-container">
@@ -2017,7 +2031,9 @@
                     </div>
                     <div class="profession-content">
                         <h3 class="profession-card-title">Theater Artist</h3>
-                        <p class="profession-description">Passionate about performing arts with experience in stage acting, character development, and theatrical productions. Skilled in emotive expression and collaborative performance.</p>
+                        <p class="profession-description">Passionate about performing arts with experience in stage
+                            acting, character development, and theatrical productions. Skilled in emotive expression and
+                            collaborative performance.</p>
                         <div class="profession-skills">
                             <span class="skill-tag">Stage Acting</span>
                             <span class="skill-tag">Character Development</span>
@@ -2029,12 +2045,12 @@
                         </div>
                     </div>
                 </a>
-                
+
                 <!-- Videography & Photography -->
                 <a href="videography-photography.html" class="profession-card">
                     <div class="profession-img-container">
-                        <img src="https://www.sammyfans.com/wp-content/uploads/2024/12/galaxy-s24-ultra-camera-img.jpg" 
-                             alt="Videography & Photography" class="profession-img">
+                        <img src="https://www.sammyfans.com/wp-content/uploads/2024/12/galaxy-s24-ultra-camera-img.jpg"
+                            alt="Videography & Photography" class="profession-img">
                         <div class="profession-overlay">
                             <div>
                                 <h3 class="profession-card-title">Videography & Photography</h3>
@@ -2044,7 +2060,8 @@
                     </div>
                     <div class="profession-content">
                         <h3 class="profession-card-title">Videography & Photography</h3>
-                        <p class="profession-description">Professional videography and photography services capturing moments, events, and creating visual content for various platforms.</p>
+                        <p class="profession-description">Professional videography and photography services capturing
+                            moments, events, and creating visual content for various platforms.</p>
                         <div class="profession-skills">
                             <span class="skill-tag">Video Shooting</span>
                             <span class="skill-tag">Photography</span>
@@ -2056,7 +2073,7 @@
                         </div>
                     </div>
                 </a>
-                
+
                 <!-- NCC (National Cadet Corps) -->
                 <a href="ncc.html" class="profession-card">
                     <div class="profession-img-container">
@@ -2070,7 +2087,9 @@
                     </div>
                     <div class="profession-content">
                         <h3 class="profession-card-title">NCC (National Cadet Corps)</h3>
-                        <p class="profession-description">Dedicated NCC cadet with leadership experience, discipline, and commitment to national service. Participated in various camps, drills, and social service activities.</p>
+                        <p class="profession-description">Dedicated NCC cadet with leadership experience, discipline,
+                            and commitment to national service. Participated in various camps, drills, and social
+                            service activities.</p>
                         <div class="profession-skills">
                             <span class="skill-tag">Leadership</span>
                             <span class="skill-tag">Discipline</span>
@@ -2090,15 +2109,15 @@
     <section id="achievements" class="page-section">
         <div class="container">
 
-            
+
             <h2 class="section-title">My Achievements</h2>
-            
+
             <div class="achievements-grid">
                 <!-- Achievement 1: Hackathon 2025 -->
                 <a href="hackathon-2025.html" class="achievement-card">
                     <div class="achievement-img-container">
-                        <img src="https://wasim-ibrar-portfolio.netlify.app/images/P-photo2.jpg" 
-                             alt="Hackathon 2025" class="achievement-img">
+                        <img src="https://wasim-ibrar-portfolio.netlify.app/images/P-photo2.jpg" alt="Hackathon 2025"
+                            class="achievement-img">
                         <div class="achievement-overlay">
                             <div>
                                 <h3 class="achievement-card-title">Hackathon 2025</h3>
@@ -2108,7 +2127,8 @@
                     </div>
                     <div class="achievement-content">
                         <h3 class="achievement-card-title">Hackathon 2025</h3>
-                        <p class="achievement-description">Selected at national level in Hackathon 2025, representing MANUU in prestigious coding competition.</p>
+                        <p class="achievement-description">Selected at national level in Hackathon 2025, representing
+                            MANUU in prestigious coding competition.</p>
                         <div class="achievement-date">
                             <i class="far fa-calendar-alt"></i> March 2025
                         </div>
@@ -2117,7 +2137,7 @@
                         </div>
                     </div>
                 </a>
-                
+
                 <!-- Achievement 2: Cultural Activities -->
                 <a href="cultural-achievements.html" class="achievement-card">
                     <div class="achievement-img-container">
@@ -2131,7 +2151,8 @@
                     </div>
                     <div class="achievement-content">
                         <h3 class="achievement-card-title">Cultural Achievements</h3>
-                        <p class="achievement-description">Multiple awards in cultural activities including mime and play competitions at zonal and national levels.</p>
+                        <p class="achievement-description">Multiple awards in cultural activities including mime and
+                            play competitions at zonal and national levels.</p>
                         <div class="achievement-date">
                             <i class="far fa-calendar-alt"></i> 2023-2024
                         </div>
@@ -2140,12 +2161,12 @@
                         </div>
                     </div>
                 </a>
-                
+
                 <!-- Achievement 3: NCC Camps -->
                 <a href="ncc-achievements.html" class="achievement-card">
                     <div class="achievement-img-container">
-                        <img src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=876&q=80" 
-                             alt="NCC Achievements" class="achievement-img">
+                        <img src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=876&q=80"
+                            alt="NCC Achievements" class="achievement-img">
                         <div class="achievement-overlay">
                             <div>
                                 <h3 class="achievement-card-title">NCC Achievements</h3>
@@ -2155,7 +2176,8 @@
                     </div>
                     <div class="achievement-content">
                         <h3 class="achievement-card-title">NCC Achievements</h3>
-                        <p class="achievement-description">Participated in national level NCC camps including ATC Camp and NER Trek Camp as an active cadet.</p>
+                        <p class="achievement-description">Participated in national level NCC camps including ATC Camp
+                            and NER Trek Camp as an active cadet.</p>
                         <div class="achievement-date">
                             <i class="far fa-calendar-alt"></i> 2022-2024
                         </div>
@@ -2164,12 +2186,12 @@
                         </div>
                     </div>
                 </a>
-                
+
                 <!-- Achievement 4: Videography Award -->
                 <a href="videography-award.html" class="achievement-card">
                     <div class="achievement-img-container">
-                        <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" 
-                             alt="Videography Award" class="achievement-img">
+                        <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+                            alt="Videography Award" class="achievement-img">
                         <div class="achievement-overlay">
                             <div>
                                 <h3 class="achievement-card-title">Videography Award</h3>
@@ -2179,7 +2201,8 @@
                     </div>
                     <div class="achievement-content">
                         <h3 class="achievement-card-title">Videography Award</h3>
-                        <p class="achievement-description">Won Best Photographer & Videographer Award in Nagaland for outstanding video editing and photography work.</p>
+                        <p class="achievement-description">Won Best Photographer & Videographer Award in Nagaland for
+                            outstanding video editing and photography work.</p>
                         <div class="achievement-date">
                             <i class="far fa-calendar-alt"></i> December 2024
                         </div>
@@ -2198,11 +2221,14 @@
             <h2 class="section-title">Reach Us</h2>
             <div class="reach-content">
                 <div class="reach-text">
-                    <p>I'm always open to discussing new opportunities, interesting projects, and creative ideas. Feel free to reach out if you want to collaborate or just say hello!</p>
-                    <p>Whether you have a question about my work, want to discuss a potential project, or just want to connect, I'd love to hear from you.</p>
-                    <p>I'm particularly interested in web development projects, innovative tech solutions, and research collaborations in the IT field.</p>
+                    <p>I'm always open to discussing new opportunities, interesting projects, and creative ideas. Feel
+                        free to reach out if you want to collaborate or just say hello!</p>
+                    <p>Whether you have a question about my work, want to discuss a potential project, or just want to
+                        connect, I'd love to hear from you.</p>
+                    <p>I'm particularly interested in web development projects, innovative tech solutions, and research
+                        collaborations in the IT field.</p>
                     <p>My response time is usually within 24 hours. Looking forward to connecting with you!</p>
-                    
+
                     <div class="contact-info">
                         <h3>Contact Information</h3>
                         <p><i class="fas fa-user"></i> Mohammad Sahil Shaikh</p>
@@ -2211,7 +2237,7 @@
                         <p><i class="fas fa-phone"></i> +91 9263602455</p>
                     </div>
                 </div>
-                
+
                 <div class="contact-form">
                     <h3>Send Message</h3>
                     <div id="messageStatus" class="message-status"></div>
@@ -2247,9 +2273,12 @@
             <div class="footer-content">
                 <p>Connect with me on social media</p>
                 <div class="footer-social-icons">
-                    <a href="https://www.instagram.com/arman_shaikh_549?igsh=ZDlqc2w3ZXEzOTRx" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.linkedin.com/in/mohammad-sahil-shaikh-493a1929b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/arman_shaikh_549?igsh=ZDlqc2w3ZXEzOTRx" target="_blank"
+                        title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank" title="Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/in/mohammad-sahil-shaikh-493a1929b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                        target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://github.com" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
                 </div>
             </div>
@@ -2261,15 +2290,15 @@
         // ======= NAVIGATION =======
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.getElementById('navLinks');
-        
+
         // Create overlay backdrop for mobile menu
         const navOverlay = document.createElement('div');
         navOverlay.style.cssText = 'display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.5);z-index:998;';
         document.body.appendChild(navOverlay);
-        
+
         function toggleNav(forceClose) {
             const isOpen = navLinks.classList.contains('active');
-            if(forceClose || isOpen) {
+            if (forceClose || isOpen) {
                 navLinks.classList.remove('active');
                 navOverlay.style.display = 'none';
                 hamburger.innerHTML = '<i class="fas fa-bars"></i>';
@@ -2279,31 +2308,31 @@
                 hamburger.innerHTML = '<i class="fas fa-times"></i>';
             }
         }
-        
+
         hamburger.addEventListener('click', () => toggleNav());
         navOverlay.addEventListener('click', () => toggleNav(true));
-        
+
         // Close mobile menu when clicking on a link
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => toggleNav(true));
         });
-        
+
         // ======= SMOOTH SCROLLING =======
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
+
                 const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
+                if (targetId === '#') return;
+
                 const targetElement = document.querySelector(targetId);
-                if(targetElement) {
+                if (targetElement) {
                     // Update active link
                     document.querySelectorAll('.nav-links a').forEach(link => {
                         link.classList.remove('active');
                     });
                     this.classList.add('active');
-                    
+
                     // Scroll to section
                     window.scrollTo({
                         top: targetElement.offsetTop - 80,
@@ -2312,13 +2341,13 @@
                 }
             });
         });
-        
+
         // ======= ACTIVE NAV LINK ON SCROLL =======
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
             const sections = document.querySelectorAll('.page-section');
             const navLinks = document.querySelectorAll('.nav-links a');
-            
+
             // Header scroll effect
             if (window.scrollY > 50) {
                 header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.2)';
@@ -2327,7 +2356,7 @@
                 header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
                 header.style.background = 'rgba(15, 23, 42, 0.9)';
             }
-            
+
             // Update active nav link based on scroll position
             let current = '';
             sections.forEach(section => {
@@ -2337,7 +2366,7 @@
                     current = section.getAttribute('id');
                 }
             });
-            
+
             navLinks.forEach(link => {
                 link.classList.remove('active');
                 if (link.getAttribute('href') === `#${current}`) {
@@ -2345,51 +2374,51 @@
                 }
             });
         });
-        
+
         // ======= HOME SECTION FUNCTIONALITY =======
         // Profession Rotator for Badge
         const professions = [
             "Web Developer",
-            "Video Editor", 
+            "Video Editor",
             "Videographer",
             "Photographer",
             "Photo Editor",
             "Software Engineer",
             "Social Media Manager"
         ];
-        
+
         let currentProfessionIndex = 0;
         const professionBadge = document.getElementById('professionBadge');
-        
+
         function updateProfessionBadge() {
             professionBadge.textContent = professions[currentProfessionIndex];
             currentProfessionIndex = (currentProfessionIndex + 1) % professions.length;
         }
-        
+
         // Change profession every 3 seconds
         setInterval(updateProfessionBadge, 3000);
-        
+
         // Download CV Button Animation
         const downloadBtn = document.querySelector('.download-cv-btn');
-        
+
         if (downloadBtn) {
-            downloadBtn.addEventListener('mouseenter', function() {
+            downloadBtn.addEventListener('mouseenter', function () {
                 const icon = this.querySelector('i');
                 icon.style.transform = 'translateY(-3px)';
             });
-            
-            downloadBtn.addEventListener('mouseleave', function() {
+
+            downloadBtn.addEventListener('mouseleave', function () {
                 const icon = this.querySelector('i');
                 icon.style.transform = 'translateY(0)';
             });
-            
+
             // Simulate download if file doesn't exist
-            downloadBtn.addEventListener('click', function(e) {
+            downloadBtn.addEventListener('click', function (e) {
                 const fileUrl = this.getAttribute('href');
-                
+
                 if (!fileUrl || fileUrl === '#') {
                     e.preventDefault();
-                    
+
                     const downloadMessage = document.createElement('div');
                     downloadMessage.style.cssText = `
                         position: fixed;
@@ -2407,7 +2436,7 @@
                         min-width: 300px;
                         backdrop-filter: blur(10px);
                     `;
-                    
+
                     downloadMessage.innerHTML = `
                         <h3 style="color: #10b981; margin-bottom: 10px;">CV Download</h3>
                         <p>Your CV will download automatically.</p>
@@ -2416,37 +2445,37 @@
                             OK
                         </button>
                     `;
-                    
+
                     document.body.appendChild(downloadMessage);
-                    
+
                     const okButton = downloadMessage.querySelector('button');
                     okButton.addEventListener('click', () => {
                         document.body.removeChild(downloadMessage);
                     });
-                    
+
                     setTimeout(() => {
                         if (document.body.contains(downloadMessage)) {
                             document.body.removeChild(downloadMessage);
                         }
                     }, 3000);
-                    
+
                     console.log('Downloading CV...');
                 }
             });
         }
-        
+
         // ======= CONTACT FORM =======
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
             event.preventDefault();
-            
+
             const submitBtn = document.getElementById('submitBtn');
             const messageStatus = document.getElementById('messageStatus');
             const originalBtnText = submitBtn.innerHTML;
-            
+
             // Show loading state
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitBtn.disabled = true;
-            
+
             // Get form data
             const formData = {
                 name: document.getElementById('name').value,
@@ -2454,56 +2483,56 @@
                 subject: document.getElementById('subject').value,
                 message: document.getElementById('message').value
             };
-            
+
             // Simple validation
             if (!formData.name || !formData.email || !formData.subject || !formData.message) {
                 messageStatus.className = "message-status error";
                 messageStatus.innerHTML = "Please fill in all fields";
                 messageStatus.style.display = "block";
-                
+
                 submitBtn.innerHTML = originalBtnText;
                 submitBtn.disabled = false;
                 return;
             }
-            
+
             // Simulate form submission (replace with actual form submission)
             setTimeout(() => {
                 // Show success message
                 messageStatus.className = "message-status success";
                 messageStatus.innerHTML = "Message sent successfully! I will get back to you within 24 hours.";
                 messageStatus.style.display = "block";
-                
+
                 // Reset form
                 document.getElementById('contactForm').reset();
-                
+
                 // Reset button
                 submitBtn.innerHTML = originalBtnText;
                 submitBtn.disabled = false;
-                
+
                 // Hide message after 5 seconds
                 setTimeout(() => {
                     messageStatus.style.display = "none";
                 }, 5000);
             }, 1500);
         });
-        
+
         // Form validation on blur
         const inputs = document.querySelectorAll('.form-control');
         inputs.forEach(input => {
-            input.addEventListener('blur', function() {
+            input.addEventListener('blur', function () {
                 if (this.value.trim() === '') {
                     this.style.borderColor = '#ef4444';
                 } else {
                     this.style.borderColor = 'rgba(255, 255, 255, 0.1)';
                 }
             });
-            
-            input.addEventListener('focus', function() {
+
+            input.addEventListener('focus', function () {
                 this.style.borderColor = '#3b82f6';
             });
         });
-        src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
-           src="script.js"
+        src = "https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+        src = "script.js"
 
         // ======= INITIALIZE =======
         // Set initial active nav link
@@ -2511,88 +2540,88 @@
 
         // ======= CMS DATA INJECTOR =======
         const cmsDB = JSON.parse(localStorage.getItem('portfolioCMS'));
-        if(cmsDB) {
+        if (cmsDB) {
             const m = cmsDB.meta;
-            if(m) {
+            if (m) {
                 // Texts
-                if(m.name) {
+                if (m.name) {
                     const homeH1 = document.querySelector('.home-content h1');
-                    if(homeH1) homeH1.innerHTML = `Hi, This is <br><span class="highlight">${m.name}</span>`;
+                    if (homeH1) homeH1.innerHTML = `Hi, This is <br><span class="highlight">${m.name}</span>`;
                     const aboutH3 = document.querySelector('.about-text-content h3');
-                    if(aboutH3) aboutH3.innerText = m.name;
+                    if (aboutH3) aboutH3.innerText = m.name;
                     const btmName = document.querySelector('.contact-info p:nth-child(2)');
-                    if(btmName) btmName.innerHTML = `<i class="fas fa-user"></i> ${m.name}`;
+                    if (btmName) btmName.innerHTML = `<i class="fas fa-user"></i> ${m.name}`;
                 }
-                if(m.profImg) {
+                if (m.profImg) {
                     const profImg = document.querySelector('.profile-img');
-                    if(profImg) {
+                    if (profImg) {
                         profImg.src = m.profImg;
                         profImg.style.filter = "none";
                     }
                 }
-                if(m.about1) {
+                if (m.about1) {
                     const pList = document.querySelectorAll('.about-text-content p');
-                    if(pList[0]) pList[0].innerText = m.about1;
+                    if (pList[0]) pList[0].innerText = m.about1;
                 }
-                if(m.about2) {
+                if (m.about2) {
                     const pList = document.querySelectorAll('.about-text-content p');
-                    if(pList[1]) pList[1].innerText = m.about2;
+                    if (pList[1]) pList[1].innerText = m.about2;
                 }
-                if(m.travelHeader) {
+                if (m.travelHeader) {
                     const th = document.querySelector('#travel .section-title');
-                    if(th) th.innerText = m.travelHeader;
+                    if (th) th.innerText = m.travelHeader;
                 }
-                if(m.travelDesc) {
+                if (m.travelDesc) {
                     const td = document.querySelector('#travel p');
-                    if(td) td.innerText = m.travelDesc;
+                    if (td) td.innerText = m.travelDesc;
                 }
-                if(m.projHeader) {
+                if (m.projHeader) {
                     const ph = document.querySelector('#projects .section-title');
-                    if(ph) ph.innerText = m.projHeader;
+                    if (ph) ph.innerText = m.projHeader;
                 }
-                if(m.profHeader) {
+                if (m.profHeader) {
                     const prh = document.querySelector('#profession .section-title');
-                    if(prh) prh.innerText = m.profHeader;
+                    if (prh) prh.innerText = m.profHeader;
                 }
-                if(m.achieveHeader) {
+                if (m.achieveHeader) {
                     const ah = document.querySelector('#achievements .section-title');
-                    if(ah) ah.innerText = m.achieveHeader;
+                    if (ah) ah.innerText = m.achieveHeader;
                 }
-                if(m.cLoc) {
+                if (m.cLoc) {
                     const l = document.querySelector('.contact-info p:nth-child(3)');
-                    if(l) l.innerHTML = `<i class="fas fa-map-marker-alt"></i> ${m.cLoc}`;
+                    if (l) l.innerHTML = `<i class="fas fa-map-marker-alt"></i> ${m.cLoc}`;
                 }
-                if(m.cMail) {
+                if (m.cMail) {
                     const e = document.querySelector('.contact-info p:nth-child(4)');
-                    if(e) e.innerHTML = `<i class="fas fa-envelope"></i> ${m.cMail}`;
+                    if (e) e.innerHTML = `<i class="fas fa-envelope"></i> ${m.cMail}`;
                 }
-                if(m.cPhone) {
+                if (m.cPhone) {
                     const phn = document.querySelector('.contact-info p:nth-child(5)');
-                    if(phn) phn.innerHTML = `<i class="fas fa-phone"></i> ${m.cPhone}`;
+                    if (phn) phn.innerHTML = `<i class="fas fa-phone"></i> ${m.cPhone}`;
                 }
 
                 // --- NEW STATS & SOCIALS ---
-                if(m.socInsta) { const ig = document.querySelector('.home-social-icons a[title="Instagram"]'); if(ig) ig.href = m.socInsta; }
-                if(m.socFb) { const fb = document.querySelector('.home-social-icons a[title="Facebook"]'); if(fb) fb.href = m.socFb; }
-                if(m.socLi) { const li = document.querySelector('.home-social-icons a[title="LinkedIn"]'); if(li) li.href = m.socLi; }
-                if(m.socGit) { const gh = document.querySelector('.home-social-icons a[title="GitHub"]'); if(gh) gh.href = m.socGit; }
-                if(m.cvLink) { const cv = document.querySelector('.download-cv-btn'); if(cv) { cv.href = m.cvLink; cv.removeAttribute("download"); } }
+                if (m.socInsta) { const ig = document.querySelector('.home-social-icons a[title="Instagram"]'); if (ig) ig.href = m.socInsta; }
+                if (m.socFb) { const fb = document.querySelector('.home-social-icons a[title="Facebook"]'); if (fb) fb.href = m.socFb; }
+                if (m.socLi) { const li = document.querySelector('.home-social-icons a[title="LinkedIn"]'); if (li) li.href = m.socLi; }
+                if (m.socGit) { const gh = document.querySelector('.home-social-icons a[title="GitHub"]'); if (gh) gh.href = m.socGit; }
+                if (m.cvLink) { const cv = document.querySelector('.download-cv-btn'); if (cv) { cv.href = m.cvLink; cv.removeAttribute("download"); } }
 
                 const statNums = document.querySelectorAll('.stat-number');
-                if(statNums.length >= 4) {
-                    if(m.stExp) statNums[0].innerText = m.stExp;
-                    if(m.stProj) statNums[1].innerText = m.stProj;
-                    if(m.stCert) statNums[2].innerText = m.stCert;
-                    if(m.stCity) statNums[3].innerText = m.stCity;
+                if (statNums.length >= 4) {
+                    if (m.stExp) statNums[0].innerText = m.stExp;
+                    if (m.stProj) statNums[1].innerText = m.stProj;
+                    if (m.stCert) statNums[2].innerText = m.stCert;
+                    if (m.stCity) statNums[3].innerText = m.stCity;
                 }
             }
 
             // Professions
-            if(cmsDB.professions && cmsDB.professions.length > 0) {
+            if (cmsDB.professions && cmsDB.professions.length > 0) {
                 professions.length = 0;
                 cmsDB.professions.forEach(p => professions.push(p));
             }
-            
+
             // Grid Cards — NEW SCHEMA: db.cats[category].items
             const gridMap = {
                 'travel': document.querySelector('.travel-grid'),
@@ -2604,16 +2633,16 @@
             const prefixMap = { 'travel': 'travel', 'projects': 'project', 'achievements': 'achievement', 'profession': 'profession' };
 
             // Inject section titles from cats
-            if(cmsDB.cats) {
-                if(cmsDB.cats.travel && cmsDB.cats.travel.title) { const el=document.querySelector('#travel .section-title'); if(el) el.innerText=cmsDB.cats.travel.title; }
-                if(cmsDB.cats.projects && cmsDB.cats.projects.title) { const el=document.querySelector('#projects .section-title'); if(el) el.innerText=cmsDB.cats.projects.title; }
-                if(cmsDB.cats.profession && cmsDB.cats.profession.title) { const el=document.querySelector('#profession .section-title'); if(el) el.innerText=cmsDB.cats.profession.title; }
-                if(cmsDB.cats.achievements && cmsDB.cats.achievements.title) { const el=document.querySelector('#achievements .section-title'); if(el) el.innerText=cmsDB.cats.achievements.title; }
+            if (cmsDB.cats) {
+                if (cmsDB.cats.travel && cmsDB.cats.travel.title) { const el = document.querySelector('#travel .section-title'); if (el) el.innerText = cmsDB.cats.travel.title; }
+                if (cmsDB.cats.projects && cmsDB.cats.projects.title) { const el = document.querySelector('#projects .section-title'); if (el) el.innerText = cmsDB.cats.projects.title; }
+                if (cmsDB.cats.profession && cmsDB.cats.profession.title) { const el = document.querySelector('#profession .section-title'); if (el) el.innerText = cmsDB.cats.profession.title; }
+                if (cmsDB.cats.achievements && cmsDB.cats.achievements.title) { const el = document.querySelector('#achievements .section-title'); if (el) el.innerText = cmsDB.cats.achievements.title; }
 
                 Object.keys(gridMap).forEach(catKey => {
                     const parent = gridMap[catKey];
                     const catData = cmsDB.cats[catKey];
-                    if(!parent || !catData || !catData.items || catData.items.length === 0) return;
+                    if (!parent || !catData || !catData.items || catData.items.length === 0) return;
 
                     catData.items.forEach(card => {
                         const el = document.createElement('div');
@@ -2621,7 +2650,7 @@
                         el.style.cursor = 'pointer';
 
                         let html = '';
-                        if(catKey === 'travel') {
+                        if (catKey === 'travel') {
                             html = `<img src="${card.covSrc}" class="travel-img" style="object-fit:cover;"><div class="travel-name">${card.covTit}</div>`;
                         } else {
                             const prefix = prefixMap[catKey];
@@ -2644,10 +2673,10 @@
             }
 
             // Legacy flat cards fallback
-            if(cmsDB.cards && cmsDB.cards.length > 0) {
+            if (cmsDB.cards && cmsDB.cards.length > 0) {
                 cmsDB.cards.forEach(card => {
                     const parent = gridMap[card.cat];
-                    if(parent) {
+                    if (parent) {
                         const el = document.createElement('div');
                         el.className = cardClassMap[card.cat];
                         el.style.cursor = 'pointer';
@@ -2676,7 +2705,7 @@
                 </div>
             </div>`;
         document.body.appendChild(detailModal);
-        detailModal.addEventListener('click', e => { if(e.target === detailModal) detailModal.style.display='none'; });
+        detailModal.addEventListener('click', e => { if (e.target === detailModal) detailModal.style.display = 'none'; });
 
         function openDetailModal(card) {
             document.getElementById('dmCoverImg').src = card.covSrc || '';
@@ -2684,7 +2713,7 @@
             document.getElementById('dmStory').innerText = card.innStory || card.covDes || '';
             const gallery = document.getElementById('dmGallery');
             gallery.innerHTML = '';
-            if(card.innImgs && card.innImgs.length > 0) {
+            if (card.innImgs && card.innImgs.length > 0) {
                 card.innImgs.forEach(src => {
                     gallery.innerHTML += `<img src="${src}" style="width:100%; border-radius:10px; object-fit:cover; height:160px;">`;
                 });
@@ -2696,7 +2725,7 @@
     <script>
         // SLIDER LOGIC WITH CMS
         const defaultImages = [
-            'Sahil.jpg', 'sahil6.jpeg', 'sahil14.jpeg', 
+            'Sahil.jpg', 'sahil6.jpeg', 'sahil14.jpeg',
             'sahil23.jpeg', 'sahil33.jpeg', 'sahil39.jpeg'
         ];
 
@@ -2707,7 +2736,7 @@
         } else {
             // Legacy / Default
             let legacy = JSON.parse(localStorage.getItem('sliderImages'));
-            if(legacy && legacy.length > 0) {
+            if (legacy && legacy.length > 0) {
                 sliderData = legacy;
             } else {
                 sliderData = defaultImages;
@@ -2715,7 +2744,7 @@
         }
 
         const sliderTrack = document.getElementById('sliderTrack');
-        
+
         // Render images
         sliderData.forEach(item => {
             const slide = document.createElement('div');
@@ -2728,7 +2757,7 @@
         let isAnimating = false;
 
         function slideNext() {
-            if(sliderTrack.children.length <= 1 || isAnimating) return;
+            if (sliderTrack.children.length <= 1 || isAnimating) return;
             isAnimating = true;
             sliderTrack.style.transition = 'transform 0.5s ease-in-out';
             sliderTrack.style.transform = 'translateX(-100%)';
@@ -2741,15 +2770,15 @@
         }
 
         function slidePrev() {
-            if(sliderTrack.children.length <= 1 || isAnimating) return;
+            if (sliderTrack.children.length <= 1 || isAnimating) return;
             isAnimating = true;
             sliderTrack.style.transition = 'none';
             sliderTrack.prepend(sliderTrack.lastElementChild); // Pull from back
             sliderTrack.style.transform = 'translateX(-100%)';
-            
+
             // Force browser reflow to apply the no-transition shift immediately
             void sliderTrack.offsetWidth;
-            
+
             sliderTrack.style.transition = 'transform 0.5s ease-in-out';
             sliderTrack.style.transform = 'translateX(0)';
             setTimeout(() => { isAnimating = false; }, 500);
@@ -2776,8 +2805,9 @@
         sliderTrack.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
         sliderTrack.addEventListener('touchend', e => {
             const diff = touchStartX - e.changedTouches[0].clientX;
-            if(Math.abs(diff) > 50) { diff > 0 ? slideNext() : slidePrev(); resetInterval(); }
+            if (Math.abs(diff) > 50) { diff > 0 ? slideNext() : slidePrev(); resetInterval(); }
         }, { passive: true });
     </script>
 </body>
+
 </html>
