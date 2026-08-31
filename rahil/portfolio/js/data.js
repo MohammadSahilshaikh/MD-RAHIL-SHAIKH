@@ -120,3 +120,33 @@ function saveData(data) {
 function resetData() {
   localStorage.removeItem(STORAGE_KEY);
 }
+
+// Synchronize with Cloud Backend (Supabase API)
+async function fetchCloudData() {
+  try {
+    const res = await fetch("/api/get-portfolio");
+    if (!res.ok) return null;
+    const json = await res.json();
+    if (json && json.success && json.data && Object.keys(json.data).length > 0) {
+      saveData(json.data);
+      return json.data;
+    }
+  } catch (e) {
+    console.warn("Cloud data fetch fallback to local cache:", e);
+  }
+  return null;
+}
+
+async function saveCloudData(data, password) {
+  try {
+    const res = await fetch("/api/save-portfolio", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ password, data })
+    });
+    return await res.json();
+  } catch (e) {
+    console.error("Cloud save failed:", e);
+    return { success: false, error: e.message };
+  }
+}

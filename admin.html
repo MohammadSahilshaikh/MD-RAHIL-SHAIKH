@@ -389,7 +389,7 @@
   }
 
   // ---------- SAVE ----------
-  function handleSave() {
+  async function handleSave() {
     workingData.name = document.getElementById("f_name").value;
     workingData.title = document.getElementById("f_title").value;
     workingData.tagline = document.getElementById("f_tagline").value;
@@ -421,7 +421,15 @@
     };
 
     saveData(workingData);
-    showToast("✅ Changes saved successfully!");
+    showToast("💾 Syncing with Supabase Cloud...");
+
+    const password = document.getElementById("passwordInput").value;
+    const res = await saveCloudData(workingData, password);
+    if (res && res.success) {
+      showToast("✅ Saved & Synced across all devices!");
+    } else {
+      showToast("⚠️ Local saved. Cloud sync: " + (res.error || "Done"));
+    }
   }
 
   function handleReset() {
