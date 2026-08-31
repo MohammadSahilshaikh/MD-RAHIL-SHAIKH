@@ -11,7 +11,7 @@ const ADMIN_PASSWORD = "admin123"; // <-- Ise yahan se change kar sakte ho
 
 // Default content (100% verified CV data)
 const DEFAULT_DATA = {
-  version: 4,
+  version: 5,
   name: "MD RAHIL SHAIKH",
   title: "CIVIL QUALITY & SITE ENGINEER",
   tagline: "Proactive & Quality-Focused Civil Engineer | QC & Site Execution Specialist",
@@ -77,7 +77,7 @@ const DEFAULT_DATA = {
   },
 
   emailjs: {
-    serviceId: "portfolio",
+    serviceId: "service_6nrx68j",
     templateId: "template_ihpt477",
     publicKey: "GIbeIviQo1ehc1gxX"
   }
