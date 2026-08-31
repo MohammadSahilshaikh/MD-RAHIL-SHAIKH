@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Md Rahil Shaikh</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="navMount"></div>
+
+<header class="section blueprint-bg section-dark" style="padding:70px 0 50px;">
+  <div class="container reveal">
+    <span class="eyebrow">Let's Connect</span>
+    <h1 style="font-size:clamp(2rem,4vw,3rem); color:var(--white);">Contact</h1>
+  </div>
+</header>
+
+<section class="section section-light">
+  <div class="container contact-grid">
+    <div class="reveal">
+      <div class="contact-item">
+        <div class="contact-icon">@</div>
+        <div>
+          <div class="contact-label">Email</div>
+          <div id="contactEmail"></div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">☎</div>
+        <div>
+          <div class="contact-label">Phone</div>
+          <div id="contactPhone"></div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        <div>
+          <div class="contact-label">Location</div>
+          <div id="contactLocation"></div>
+        </div>
+      </div>
+      <div class="contact-item" id="linkedinItem" style="display:none;">
+        <div class="contact-icon">in</div>
+        <div>
+          <div class="contact-label">LinkedIn</div>
+          <a id="contactLinkedin" target="_blank" style="color:var(--safety-orange);"></a>
+        </div>
+      </div>
+    </div>
+
+    <form class="reveal" id="contactForm" onsubmit="return handleSubmit(event)">
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" required>
+      </div>
+      <div class="form-group">
+        <label>Your Email</label>
+        <input type="email" required>
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+      <p style="font-size:0.8rem; color:var(--steel-light); margin-top:10px;">
+        Note: Ye ek static form hai — message bhejne ke liye ise apne email service (jaise Formspree) se connect karna hoga.
+      </p>
+    </form>
+  </div>
+</section>
+
+<div id="footMount"></div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+  const data = injectLayout();
+  document.getElementById("contactEmail").textContent = data.contact.email;
+  document.getElementById("contactPhone").textContent = data.contact.phone;
+  document.getElementById("contactLocation").textContent = data.contact.location;
+
+  if (data.contact.linkedin) {
+    document.getElementById("linkedinItem").style.display = "flex";
+    const link = document.getElementById("contactLinkedin");
+    link.href = data.contact.linkedin;
+    link.textContent = data.contact.linkedin;
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    alert("Message ready! Ise bhejne ke liye form ko Formspree/EmailJS jaise service se connect karein.");
+    return false;
+  }
+</script>
+</body>
+</html>

@@ -103,7 +103,7 @@
 
     <!-- CONTACT SECTION -->
     <div class="admin-section">
-      <h3><span class="step-num">6</span> Contact & Social Links</h3>
+      <h3><span class="step-num">6</span> Contact Info</h3>
       <div class="admin-field">
         <label>Email</label>
         <input type="email" id="f_email">
@@ -117,36 +117,8 @@
         <input type="text" id="f_location">
       </div>
       <div class="admin-field">
-        <label>Instagram URL</label>
-        <input type="text" id="f_instagram" placeholder="https://instagram.com/yourusername">
-      </div>
-      <div class="admin-field">
-        <label>Facebook URL</label>
-        <input type="text" id="f_facebook" placeholder="https://facebook.com/yourusername">
-      </div>
-      <div class="admin-field">
-        <label>LinkedIn URL</label>
-        <input type="text" id="f_linkedin" placeholder="https://linkedin.com/in/yourusername">
-      </div>
-    </div>
-
-    <!-- EMAILJS SETTINGS SECTION -->
-    <div class="admin-section">
-      <h3><span class="step-num">7</span> EmailJS Settings (Contact Form Email)</h3>
-      <p style="font-size:0.82rem; color:var(--steel-light); margin-bottom:14px;">
-        Aapne EmailJS <b>Service ID</b> me <code>portfolio</code> rakha hai. Email aane ke liye <b>EmailJS.com</b> se apna <b>Template ID</b> aur <b>Public Key</b> yahan daalein.
-      </p>
-      <div class="admin-field">
-        <label>EmailJS Service ID</label>
-        <input type="text" id="f_ejs_service" value="portfolio">
-      </div>
-      <div class="admin-field">
-        <label>EmailJS Template ID</label>
-        <input type="text" id="f_ejs_template" placeholder="template_xxxxxx">
-      </div>
-      <div class="admin-field">
-        <label>EmailJS Public Key (User Key)</label>
-        <input type="text" id="f_ejs_public" placeholder="user_xxxxxx / Public Key">
+        <label>LinkedIn URL (optional)</label>
+        <input type="text" id="f_linkedin">
       </div>
     </div>
 
@@ -213,17 +185,10 @@
     document.getElementById("f_bio").value = d.about.bio;
     document.getElementById("f_skills").value = (d.about.skills || []).join(", ");
 
-    document.getElementById("f_email").value = d.contact.email || "";
-    document.getElementById("f_phone").value = d.contact.phone || "";
-    document.getElementById("f_location").value = d.contact.location || "";
-    document.getElementById("f_instagram").value = d.contact.instagram || "";
-    document.getElementById("f_facebook").value = d.contact.facebook || "";
+    document.getElementById("f_email").value = d.contact.email;
+    document.getElementById("f_phone").value = d.contact.phone;
+    document.getElementById("f_location").value = d.contact.location;
     document.getElementById("f_linkedin").value = d.contact.linkedin || "";
-
-    const ejs = d.emailjs || {};
-    document.getElementById("f_ejs_service").value = ejs.serviceId || "portfolio";
-    document.getElementById("f_ejs_template").value = ejs.templateId || "";
-    document.getElementById("f_ejs_public").value = ejs.publicKey || "";
 
     renderExperience();
     renderGallery();
@@ -352,15 +317,7 @@
     workingData.contact.email = document.getElementById("f_email").value;
     workingData.contact.phone = document.getElementById("f_phone").value;
     workingData.contact.location = document.getElementById("f_location").value;
-    workingData.contact.instagram = document.getElementById("f_instagram").value;
-    workingData.contact.facebook = document.getElementById("f_facebook").value;
     workingData.contact.linkedin = document.getElementById("f_linkedin").value;
-
-    workingData.emailjs = {
-      serviceId: document.getElementById("f_ejs_service").value.trim() || "portfolio",
-      templateId: document.getElementById("f_ejs_template").value.trim(),
-      publicKey: document.getElementById("f_ejs_public").value.trim()
-    };
 
     saveData(workingData);
     showToast("✅ Changes saved successfully!");

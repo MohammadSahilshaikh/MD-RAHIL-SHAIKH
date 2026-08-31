@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Md Rahil Shaikh | Civil Engineer</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="navMount"></div>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero blueprint-bg">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow" id="heroEyebrow">Civil Engineer</span>
+      <h1 id="heroName">Md Rahil Shaikh</h1>
+      <p class="tagline" id="heroTagline">Building Tomorrow, One Blueprint at a Time</p>
+      <div class="hero-actions">
+        <a href="#" id="cvDownloadBtn" class="btn btn-primary">⬇ Download CV</a>
+        <a href="gallery.html" class="btn btn-outline">View Gallery</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div>
+        <div class="hero-photo-frame">
+          <img id="heroImg" src="" alt="Md Rahil Shaikh" style="display:none;">
+          <div class="hero-photo-placeholder" id="heroImgPlaceholder">Admin panel se<br>photo upload karein</div>
+        </div>
+
+        <!-- Building + crane SVG animation -->
+        <svg class="building-scene" width="280" height="180" viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg">
+          <!-- ground -->
+          <rect x="0" y="160" width="280" height="4" fill="#E8722C" opacity="0.6"/>
+          <!-- building floors (rise animation) -->
+          <g>
+            <rect class="floor-rect" x="60" y="128" width="90" height="32" fill="#5D9ED6" opacity="0.85"/>
+            <rect class="floor-rect" x="60" y="98" width="90" height="30" fill="#4A8CC4" opacity="0.85"/>
+            <rect class="floor-rect" x="60" y="70" width="90" height="28" fill="#3E7BAE" opacity="0.85"/>
+            <rect class="floor-rect" x="60" y="46" width="90" height="24" fill="#336994" opacity="0.7"/>
+            <rect class="floor-rect" x="70" y="26" width="70" height="20" fill="#2A587D" opacity="0.55" stroke="#E8722C" stroke-dasharray="3 3"/>
+          </g>
+          <!-- windows -->
+          <g fill="#FDFCFA" opacity="0.5">
+            <rect x="70" y="105" width="10" height="12"/><rect x="90" y="105" width="10" height="12"/><rect x="110" y="105" width="10" height="12"/><rect x="130" y="105" width="10" height="12"/>
+            <rect x="70" y="76" width="10" height="12"/><rect x="90" y="76" width="10" height="12"/><rect x="110" y="76" width="10" height="12"/><rect x="130" y="76" width="10" height="12"/>
+            <rect x="70" y="135" width="10" height="12"/><rect x="90" y="135" width="10" height="12"/><rect x="110" y="135" width="10" height="12"/><rect x="130" y="135" width="10" height="12"/>
+          </g>
+          <!-- crane -->
+          <g>
+            <rect x="196" y="20" width="4" height="140" fill="#E8722C"/>
+            <g class="crane-arm">
+              <rect x="150" y="18" width="90" height="4" fill="#E8722C"/>
+              <line x1="196" y1="20" x2="160" y2="40" stroke="#E8722C" stroke-width="2"/>
+            </g>
+            <g class="crane-hook">
+              <line x1="160" y1="22" x2="160" y2="55" stroke="#EDE9E0" stroke-width="1.5"/>
+              <rect x="155" y="55" width="12" height="10" fill="#DAD4C7"/>
+            </g>
+          </g>
+          <!-- floating tool icons -->
+          <text class="floating-tool t1" x="18" y="50" font-size="22" opacity="0.4">🔧</text>
+          <text class="floating-tool t2" x="240" y="130" font-size="20" opacity="0.4">🪖</text>
+          <text class="floating-tool t3" x="30" y="140" font-size="20" opacity="0.4">📐</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== QUICK INFO STRIP ===================== -->
+<section class="section section-light">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Snapshot</span>
+      <h2>Where I Stand Today</h2>
+    </div>
+    <div class="card-grid">
+      <div class="info-card reveal">
+        <h3>🎓 Education</h3>
+        <p id="snapEducation">Diploma completed, currently pursuing B.Tech</p>
+      </div>
+      <div class="info-card reveal">
+        <h3>🏢 Currently At</h3>
+        <p id="snapCurrent">IB Group</p>
+      </div>
+      <div class="info-card reveal">
+        <h3>🏗 Previously At</h3>
+        <p id="snapPrevious">Patli Group</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GALLERY PREVIEW ===================== -->
+<section class="section section-dark blueprint-bg">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Site Work</span>
+      <h2>A Look At The Field</h2>
+    </div>
+    <div class="gallery-grid" id="galleryPreview"></div>
+    <div style="margin-top:36px; text-align:center;">
+      <a href="gallery.html" class="btn btn-outline reveal">See Full Gallery →</a>
+    </div>
+  </div>
+</section>
+
+<div id="footMount"></div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+  const data = injectLayout();
+
+  // Hero content
+  document.getElementById("heroEyebrow").textContent = data.title;
+  document.getElementById("heroName").textContent = data.name;
+  document.getElementById("heroTagline").textContent = data.tagline;
+
+  if (data.heroImg) {
+    document.getElementById("heroImg").src = data.heroImg;
+    document.getElementById("heroImg").style.display = "block";
+    document.getElementById("heroImgPlaceholder").style.display = "none";
+  }
+
+  // CV download button
+  const cvBtn = document.getElementById("cvDownloadBtn");
+  if (data.cvFile) {
+    cvBtn.href = data.cvFile;
+    cvBtn.setAttribute("download", data.cvFileName || "CV.pdf");
+  } else {
+    cvBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      alert("CV abhi upload nahi hui hai. Admin panel se upload karein.");
+    });
+  }
+
+  // Snapshot
+  document.getElementById("snapEducation").textContent = data.about.education;
+  if (data.experience.length) {
+    document.getElementById("snapCurrent").textContent =
+      data.experience[data.experience.length - 1].company;
+    document.getElementById("snapPrevious").textContent =
+      data.experience.length > 1 ? data.experience[0].company : "—";
+  }
+
+  // Gallery preview (first 3 images)
+  const previewMount = document.getElementById("galleryPreview");
+  data.gallery.slice(0, 3).forEach((item) => {
+    const div = document.createElement("div");
+    div.className = "gallery-item reveal";
+    div.innerHTML = item.img
+      ? `<img src="${item.img}" alt="${item.title}"><div class="gallery-caption">${item.title}</div>`
+      : `<div class="gallery-placeholder">📷 ${item.title}</div><div class="gallery-caption">${item.title}</div>`;
+    previewMount.appendChild(div);
+  });
+</script>
+</body>
+</html>
