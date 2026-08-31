@@ -7,7 +7,7 @@
    ============================================================ */
 
 const STORAGE_KEY = "civilPortfolioData";
-const ADMIN_PASSWORD = "admin123"; // <-- Ise yahan se change kar sakte ho
+const ADMIN_PASSWORD = "MDashraf@786"; // <-- Ise yahan se change kar sakte ho
 
 // Default content (100% verified CV data)
 const DEFAULT_DATA = {
