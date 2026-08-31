@@ -527,6 +527,8 @@
       await emailjsObj.send(serviceId, templateId, {
         from_name: name,
         from_email: email,
+        reply_to: email,
+        subject: "New Portfolio Message from " + name,
         message: message,
         to_name: data.name
       }, publicKey);
