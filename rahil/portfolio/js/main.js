@@ -66,7 +66,7 @@ function buildFooter(data) {
       </div>
     </div>
     <div class="blueprint-rule"></div>
-    <p class="footer-copy">© ${year} ${data.name} — Site under continuous construction 🏗</p>
+    <p class="footer-copy">© ${year} ${data.name} — Built with Engineering Precision 🏗</p>
   </footer>`;
 }
 

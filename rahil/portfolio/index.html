@@ -41,7 +41,7 @@
       <div>
         <div class="hero-photo-frame">
           <img id="heroImg" src="" alt="Md Rahil Shaikh" style="display:none;">
-          <div class="hero-photo-placeholder" id="heroImgPlaceholder">Admin panel se<br>photo upload karein</div>
+          <div class="hero-photo-placeholder" id="heroImgPlaceholder">Upload photo from<br>Admin Panel</div>
         </div>
 
         <!-- Building + crane SVG animation -->
@@ -412,7 +412,7 @@
   } else {
     cvBtn.addEventListener("click", (e) => {
       e.preventDefault();
-      alert("CV abhi upload nahi hui hai. Admin panel se upload karein.");
+      alert("CV file is not uploaded yet. Upload via Admin Panel.");
     });
   }
 
@@ -473,7 +473,7 @@
     timelineMount.appendChild(item);
   });
   if (data.experience.length === 0) {
-    timelineMount.innerHTML = `<p style="color:var(--concrete-dark)">Abhi tak koi experience add nahi hua. Admin panel se add karein.</p>`;
+    timelineMount.innerHTML = `<p style="color:var(--concrete-dark)">No experience items added yet. Manage content via Admin Panel.</p>`;
   }
 
 

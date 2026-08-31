@@ -12,13 +12,13 @@
 <div class="admin-login" id="loginScreen">
   <div class="admin-login-box">
     <h2>🔒 Admin Login</h2>
-    <p>Portfolio content edit karne ke liye password daalein.</p>
+    <p>Enter password to access content management dashboard.</p>
     <div class="admin-field">
       <label>Password</label>
       <input type="password" id="passwordInput" placeholder="Enter password">
     </div>
     <button class="btn btn-primary" style="width:100%; justify-content:center;" onclick="tryLogin()">Login</button>
-    <p class="admin-error" id="loginError">Galat password. Dobara try karein.</p>
+    <p class="admin-error" id="loginError">Incorrect password. Please try again.</p>
     <p style="font-size:0.78rem; color:var(--steel-light); margin-top:18px;">
   
     </p>
@@ -68,7 +68,7 @@
       <div class="admin-field">
         <label>Upload CV (PDF)</label>
         <input type="file" accept="application/pdf" id="f_cvFile" onchange="handleCvUpload(this)">
-        <p id="cvStatus" style="font-size:0.82rem; color:var(--steel-light); margin-top:6px;">Koi CV upload nahi hai.</p>
+        <p id="cvStatus" style="font-size:0.82rem; color:var(--steel-light); margin-top:6px;">No CV file uploaded.</p>
       </div>
     </div>
 
@@ -84,7 +84,7 @@
         <textarea id="f_bio"></textarea>
       </div>
       <div class="admin-field">
-        <label>Skills (comma se alag karein)</label>
+        <label>Core Skills (Separate with commas)</label>
         <input type="text" id="f_skills" placeholder="AutoCAD, Site Supervision, ...">
       </div>
     </div>
@@ -136,7 +136,7 @@
     <div class="admin-section">
       <h3><span class="step-num">7</span> EmailJS Settings (Contact Form Email)</h3>
       <p style="font-size:0.82rem; color:var(--steel-light); margin-bottom:14px;">
-        Aapne EmailJS <b>Service ID</b> me <code>portfolio</code> rakha hai. Email aane ke liye <b>EmailJS.com</b> se apna <b>Template ID</b> aur <b>Public Key</b> yahan daalein.
+        Configure your EmailJS credentials (Service ID, Template ID, and Public Key) to receive contact form messages directly.
       </p>
       <div class="admin-field">
         <label>EmailJS Service ID</label>
