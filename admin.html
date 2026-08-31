@@ -394,6 +394,14 @@
     workingData.title = document.getElementById("f_title").value;
     workingData.tagline = document.getElementById("f_tagline").value;
 
+    const heroUrlField = document.getElementById("f_heroImgUrl");
+    if (heroUrlField) {
+      const val = heroUrlField.value.trim();
+      if (val && !val.startsWith("[Uploaded")) {
+        workingData.heroImg = val;
+      }
+    }
+
     workingData.about.education = document.getElementById("f_education").value;
     workingData.about.bio = document.getElementById("f_bio").value;
     workingData.about.skills = document.getElementById("f_skills").value
@@ -407,7 +415,7 @@
     workingData.contact.linkedin = document.getElementById("f_linkedin").value;
 
     workingData.emailjs = {
-      serviceId: document.getElementById("f_ejs_service").value.trim() || "portfolio",
+      serviceId: document.getElementById("f_ejs_service").value.trim() || "service_6nrx68j",
       templateId: document.getElementById("f_ejs_template").value.trim(),
       publicKey: document.getElementById("f_ejs_public").value.trim()
     };

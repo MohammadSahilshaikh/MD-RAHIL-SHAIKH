@@ -89,11 +89,23 @@ function getData() {
   if (!raw) return JSON.parse(JSON.stringify(DEFAULT_DATA));
   try {
     const parsed = JSON.parse(raw);
-    if (!parsed.version || parsed.version < DEFAULT_DATA.version) {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(DEFAULT_DATA));
-      return JSON.parse(JSON.stringify(DEFAULT_DATA));
-    }
-    return { ...JSON.parse(JSON.stringify(DEFAULT_DATA)), ...parsed };
+    const defaults = JSON.parse(JSON.stringify(DEFAULT_DATA));
+    return {
+      ...defaults,
+      ...parsed,
+      about: {
+        ...defaults.about,
+        ...(parsed.about || {})
+      },
+      contact: {
+        ...defaults.contact,
+        ...(parsed.contact || {})
+      },
+      emailjs: {
+        ...defaults.emailjs,
+        ...(parsed.emailjs || {})
+      }
+    };
   } catch (e) {
     return JSON.parse(JSON.stringify(DEFAULT_DATA));
   }
