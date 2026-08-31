@@ -19,7 +19,9 @@ module.exports = async (req, res) => {
     });
 
     if (!response.ok) {
-      throw new Error(`Supabase returned status ${response.status}`);
+      const errText = await response.text();
+      console.warn(`Supabase returned status ${response.status}: ${errText}`);
+      return res.status(200).json({ success: false, data: {}, note: errText });
     }
 
     const rows = await response.json();
@@ -27,6 +29,6 @@ module.exports = async (req, res) => {
     return res.status(200).json({ success: true, data: portfolioData });
   } catch (error) {
     console.error('Error fetching portfolio data from Supabase:', error);
-    return res.status(500).json({ success: false, error: error.message });
+    return res.status(200).json({ success: false, data: {}, error: error.message });
   }
 };
