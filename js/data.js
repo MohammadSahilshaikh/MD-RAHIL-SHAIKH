@@ -150,3 +150,20 @@ async function saveCloudData(data, password) {
     return { success: false, error: e.message };
   }
 }
+
+// Page load pe cloud se data laao aur render karo
+// Agar cloud data mile to localStorage bhi update karo (cache)
+// Callback optional hai — index.html/gallery.html isse use karein re-render ke liye
+async function initCloudSync(onDataLoaded) {
+  const cloudData = await fetchCloudData();
+  if (cloudData && Object.keys(cloudData).length > 0) {
+    if (typeof onDataLoaded === "function") {
+      onDataLoaded(cloudData);
+    }
+  } else {
+    // Cloud se kuch nahi mila — local cache ya default se kaam chalao
+    if (typeof onDataLoaded === "function") {
+      onDataLoaded(getData());
+    }
+  }
+}

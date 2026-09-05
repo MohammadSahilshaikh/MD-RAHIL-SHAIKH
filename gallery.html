@@ -51,32 +51,36 @@
 <script src="js/data.js"></script>
 <script src="js/main.js"></script>
 <script>
-  const data = injectLayout();
-
-  const mount = document.getElementById("fullGalleryMount");
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightboxImg");
   const lightboxCaption = document.getElementById("lightboxCaption");
 
-  if (data.gallery && data.gallery.length) {
-    data.gallery.forEach((item) => {
-      const div = document.createElement("div");
-      div.className = "gallery-item reveal";
-      div.innerHTML = item.img
-        ? `<img src="${item.img}" alt="${item.title}" loading="lazy"><div class="gallery-caption">${item.title}</div>`
-        : `<div class="gallery-placeholder">📷 ${item.title}</div><div class="gallery-caption">${item.title}</div>`;
+  function renderGalleryPage(data) {
+    injectLayout();
+    const mount = document.getElementById("fullGalleryMount");
+    mount.innerHTML = "";
 
-      div.addEventListener("click", () => {
-        if (!item.img) return;
-        lightboxImg.src = item.img;
-        lightboxCaption.textContent = item.title;
-        lightbox.classList.add("open");
+    if (data.gallery && data.gallery.length) {
+      data.gallery.forEach((item) => {
+        const div = document.createElement("div");
+        div.className = "gallery-item reveal";
+        div.innerHTML = item.img
+          ? `<img src="${item.img}" alt="${item.title}" loading="lazy"><div class="gallery-caption">${item.title}</div>`
+          : `<div class="gallery-placeholder">📷 ${item.title}</div><div class="gallery-caption">${item.title}</div>`;
+
+        div.addEventListener("click", () => {
+          if (!item.img) return;
+          lightboxImg.src = item.img;
+          lightboxCaption.textContent = item.title;
+          lightbox.classList.add("open");
+        });
+
+        mount.appendChild(div);
       });
-
-      mount.appendChild(div);
-    });
-  } else {
-    mount.innerHTML = `<p style="color:var(--steel-light); grid-column:1/-1;">No photos uploaded yet. Manage photos via Admin Panel.</p>`;
+    } else {
+      mount.innerHTML = `<p style="color:var(--steel-light); grid-column:1/-1;">No photos uploaded yet. Manage photos via Admin Panel.</p>`;
+    }
+    initScrollReveal();
   }
 
   document.getElementById("lightboxClose").addEventListener("click", () => {
@@ -85,6 +89,10 @@
   lightbox.addEventListener("click", (e) => {
     if (e.target === lightbox) lightbox.classList.remove("open");
   });
+
+  // Pehle local se render, phir cloud se update
+  renderGalleryPage(getData());
+  initCloudSync(renderGalleryPage);
 </script>
 </body>
 </html>
