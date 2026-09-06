@@ -1,7 +1,58 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8">
-<title>Redirecting…</title>
-<script>window.location.replace("index.html#about");</script>
-</head><body>
-<p>Redirecting to <a href="index.html#about">About section</a>…</p>
-</body></html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | Md Rahil Shaikh</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="navMount"></div>
+
+<header class="section blueprint-bg section-dark" style="padding:70px 0 50px;">
+  <div class="container reveal">
+    <span class="eyebrow">Who I Am</span>
+    <h1 style="font-size:clamp(2rem,4vw,3rem); color:var(--white);" id="aboutHeading">About Me</h1>
+  </div>
+</header>
+
+<section class="section section-light">
+  <div class="container">
+    <div class="card-grid" style="grid-template-columns: 1.3fr 1fr; gap:50px; align-items:flex-start;">
+      <div class="reveal">
+        <span class="eyebrow">My Story</span>
+        <p id="aboutBio" style="font-size:1.05rem; color:var(--steel-light); margin-bottom:26px;"></p>
+
+        <span class="eyebrow">Education</span>
+        <p id="aboutEducation" style="font-size:1.05rem; color:var(--steel-light);"></p>
+      </div>
+
+      <div class="info-card reveal">
+        <h3>🛠 Skills</h3>
+        <div id="skillTags" style="margin-top:14px;"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footMount"></div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+  const data = injectLayout();
+  document.getElementById("aboutHeading").textContent = data.about.heading || "About Me";
+  document.getElementById("aboutBio").textContent = data.about.bio;
+  document.getElementById("aboutEducation").textContent = data.about.education;
+
+  const tagMount = document.getElementById("skillTags");
+  (data.about.skills || []).forEach((s) => {
+    const span = document.createElement("span");
+    span.className = "skill-tag";
+    span.textContent = s;
+    tagMount.appendChild(span);
+  });
+</script>
+</body>
+</html>

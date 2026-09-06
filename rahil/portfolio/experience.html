@@ -1,7 +1,52 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8">
-<title>Redirecting…</title>
-<script>window.location.replace("index.html#experience");</script>
-</head><body>
-<p>Redirecting to <a href="index.html#experience">Experience section</a>…</p>
-</body></html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experience | Md Rahil Shaikh</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="navMount"></div>
+
+<header class="section blueprint-bg section-dark" style="padding:70px 0 50px;">
+  <div class="container reveal">
+    <span class="eyebrow">Career Path</span>
+    <h1 style="font-size:clamp(2rem,4vw,3rem); color:var(--white);">Experience</h1>
+  </div>
+</header>
+
+<section class="section section-light">
+  <div class="container" style="max-width:760px;">
+    <div class="timeline" id="timelineMount"></div>
+  </div>
+</section>
+
+<div id="footMount"></div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+  const data = injectLayout();
+  const mount = document.getElementById("timelineMount");
+
+  data.experience.forEach((exp) => {
+    const item = document.createElement("div");
+    item.className = "timeline-item reveal";
+    item.innerHTML = `
+      <span class="timeline-dot"></span>
+      <span class="timeline-duration">${exp.duration}</span>
+      <h3>${exp.role}</h3>
+      <p class="company">${exp.company}</p>
+      <p>${exp.desc}</p>
+    `;
+    mount.appendChild(item);
+  });
+
+  if (data.experience.length === 0) {
+    mount.innerHTML = `<p style="color:var(--steel-light)">Abhi tak koi experience add nahi hua. Admin panel se add karein.</p>`;
+  }
+</script>
+</body>
+</html>

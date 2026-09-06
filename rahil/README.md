@@ -1,15 +1,18 @@
 # Md Rahil Shaikh — Civil Engineer Portfolio
 
 ## 📁 Files
-- `index.html` — Home page (hero + CV download + gallery preview)
-- `about.html` — Education + bio
-- `experience.html` — Work timeline
-- `gallery.html` — Photo gallery with lightbox
-- `contact.html` — Contact info
+- `index.html` — **Poori site ek hi page me** (Home → About → Experience → Gallery → Contact, sab scroll karke aate hain — mobile pe bhi hamburger click nahi karna padega)
+- `about.html`, `experience.html`, `gallery.html`, `contact.html` — Ye ab sirf chhote "redirect" files hain jo `index.html` ke sahi section pe le jaate hain (purane bookmark/links kaam karte rahein isliye rakha hai)
 - `admin.html` — Admin control panel (password protected)
 - `css/style.css` — Saara styling (colors, fonts, animations)
 - `js/data.js` — Default content + storage logic
-- `js/main.js` — Navbar, footer, animations
+- `js/main.js` — Navbar, scrollspy (scroll karte time active section highlight + navbar color change), footer, animations
+
+## 🧭 Navigation Kaise Kaam Karti Hai Ab
+- Nav bar ke links (Home/About/Experience/Gallery/Contact) ab sirf ek hi page ke andar smooth-scroll karte hain — koi naya page load nahi hota.
+- Jaise-jaise scroll karoge, sections alternate hote hain **dark blueprint navy** aur **light concrete** background me — isse pata chal jata hai ki naya section shuru hua hai.
+- Navbar khud bhi color badalta hai (dark/light) jis section me ho uske hisaab se, aur current section ka nav link highlight (underline) hota hai.
+- Mobile pe menu (☰ icon) kisi link pe click karte hi apne aap band ho jata hai.
 
 ## 🚀 Kaise Use Karein
 1. Poora `portfolio` folder ek jagah rakhein (structure mat todhna — css aur js folders same jagah rehne chahiye).

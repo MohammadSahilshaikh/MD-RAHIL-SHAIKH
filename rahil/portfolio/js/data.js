@@ -9,77 +9,50 @@
 const STORAGE_KEY = "civilPortfolioData";
 const ADMIN_PASSWORD = "admin123"; // <-- Ise yahan se change kar sakte ho
 
-// Default content (100% verified CV data)
+// Default content (agar pehli baar site khul rahi hai to ye dikhega)
 const DEFAULT_DATA = {
-  version: 6,
-  name: "MD RAHIL SHAIKH",
-  title: "CIVIL QUALITY & SITE ENGINEER",
-  tagline: "Proactive & Quality-Focused Civil Engineer | QC & Site Execution Specialist",
+  name: "Md Rahil Shaikh",
+  title: "Civil Engineer",
+  tagline: "Building Tomorrow, One Blueprint at a Time",
   heroImg: "", // base64 image (admin se upload hoga)
   cvFile: "",  // base64 pdf (admin se upload hoga)
-  cvFileName: "MD_RAHIL_SHAIKH_CV.pdf",
+  cvFileName: "Md_Rahil_Shaikh_CV.pdf",
 
   about: {
     heading: "About Me",
     education:
-      "Diploma in Civil Engineering (71% - SCTEVT, Rajdhani Engineering College, Odisha, 2024). Secondary School Examination (60% - CBSE, Darbhanga Public School, Bihar, 2021).",
+      "Diploma in Civil Engineering completed. Currently pursuing B.Tech to strengthen my technical foundation and take on bigger site challenges.",
     bio:
-      "Proactive and quality-focused Civil Engineer with hands-on experience across railway infrastructure quality assurance and solar power plant civil site execution. Skilled in Quality Control (QC) inspection, concrete testing, structural alignment, site supervision, and compliance verification. Demonstrated expertise in managing site operations strictly according to engineering drawings and technical standards.",
-    skills: [
-      "Quality Assurance / QC",
-      "Concrete Testing (Rebound Hammer, Slump)",
-      "Material Inspection & Documentation",
-      "Structure Alignment",
-      "Excavation & Leveling",
-      "Casting & Curing Supervision",
-      "Trenching",
-      "Construction Drawing Interpretation",
-      "Contractor Coordination",
-      "Site Safety",
-      "NDT Analysis"
-    ],
-    personalDetails: {
-      fatherName: "Md. Ashraf",
-      dob: "01/01/2005",
-      languages: "Hindi, English",
-      maritalStatus: "Unmarried"
-    }
+      "Main ek passionate Civil Engineer hoon jise site pe reh kar ek design ko haqeeqat banate dekhna acha lagta hai. Foundation se leke finishing tak, har stage ki precision mujhe achi tarah aati hai. Meri koshish rehti hai ki quality aur safety, dono cost-effective tareeke se maintain rahe.",
+    skills: ["AutoCAD", "Site Supervision", "Quantity Estimation", "Structural Basics", "Team Coordination", "Quality Control"]
   },
 
   experience: [
     {
-      company: "Patil Rail Infrastructure Pvt. Ltd.",
-      role: "Quality Control Engineer",
-      duration: "9 Months",
-      desc: "Executed QA/QC inspections for concrete elements & railway infra. Conducted routine site testing including concrete strength evaluations (Rebound Hammer test), slump tests, raw material checks. Monitored mix proportions, compaction & curing. Maintained quality test logs, inspection checklists & material approval reports as per railway specs."
+      company: "Patli Group",
+      role: "Site Engineer",
+      duration: "2022 — 2024",
+      desc: "Residential aur commercial projects par site supervision, material estimation aur labour coordination ka kaam kiya."
     },
     {
-      company: "Shri Karni Construction (Vendor Partner)",
-      role: "Civil Site Engineer",
-      duration: "8 Months",
-      desc: "Supervised civil development works for solar array sites (earthwork, land leveling, site grading, excavation). Inspected casting, alignment & wet curing of concrete foundation piles/pedestals for MMS. Coordinated marking & alignment according to layout drawings. Oversaw cable trenches, inverter room foundations & perimeter boundary."
+      company: "IB Group",
+      role: "Civil Engineer",
+      duration: "2024 — Present",
+      desc: "Currently ongoing infrastructure projects par quality control, progress tracking aur client coordination sambhal raha hoon."
     }
   ],
 
   gallery: [
-    { img: "", title: "Railway Concrete Inspection" },
-    { img: "", title: "Solar Array Foundation Work" },
-    { img: "", title: "Rebound Hammer Testing" }
+    { img: "", title: "Foundation Work" },
+    { img: "", title: "Site Survey" },
+    { img: "", title: "Structural Framing" }
   ],
 
   contact: {
-    email: "rahilshaikh05505@gmail.com",
-    phone: "+91 7257918588",
-    location: "Darbhanga, Bihar, India - 846005",
-    instagram: "https://instagram.com/",
-    facebook: "https://facebook.com/",
-    linkedin: "https://linkedin.com/"
-  },
-
-  emailjs: {
-    serviceId: "service_6nrx68j",
-    templateId: "template_ihpt477",
-    publicKey: "GIbeIviQo1ehc1gxX"
+    email: "rahilshaikh@example.com",
+    phone: "+91 90000 00000",
+    location: "Patna, Bihar, India",
+    linkedin: ""
   }
 };
 
@@ -89,23 +62,8 @@ function getData() {
   if (!raw) return JSON.parse(JSON.stringify(DEFAULT_DATA));
   try {
     const parsed = JSON.parse(raw);
-    const defaults = JSON.parse(JSON.stringify(DEFAULT_DATA));
-    return {
-      ...defaults,
-      ...parsed,
-      about: {
-        ...defaults.about,
-        ...(parsed.about || {})
-      },
-      contact: {
-        ...defaults.contact,
-        ...(parsed.contact || {})
-      },
-      emailjs: {
-        ...defaults.emailjs,
-        ...(parsed.emailjs || {})
-      }
-    };
+    // Merge with defaults so naye fields bhi mil jaayein purane saved data ke saath
+    return { ...JSON.parse(JSON.stringify(DEFAULT_DATA)), ...parsed };
   } catch (e) {
     return JSON.parse(JSON.stringify(DEFAULT_DATA));
   }
@@ -119,34 +77,4 @@ function saveData(data) {
 // Reset to default (admin panel me "Reset" button ke liye)
 function resetData() {
   localStorage.removeItem(STORAGE_KEY);
-}
-
-// Synchronize with Cloud Backend (Supabase API)
-async function fetchCloudData() {
-  try {
-    const res = await fetch("/api/get-portfolio");
-    if (!res.ok) return null;
-    const json = await res.json();
-    if (json && json.success && json.data && Object.keys(json.data).length > 0) {
-      saveData(json.data);
-      return json.data;
-    }
-  } catch (e) {
-    console.warn("Cloud data fetch fallback to local cache:", e);
-  }
-  return null;
-}
-
-async function saveCloudData(data, password) {
-  try {
-    const res = await fetch("/api/save-portfolio", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ password, data })
-    });
-    return await res.json();
-  } catch (e) {
-    console.error("Cloud save failed:", e);
-    return { success: false, error: e.message };
-  }
 }

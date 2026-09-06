@@ -3,83 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Project Gallery | MD RAHIL SHAIKH - Civil Quality & Site Engineering Fieldwork</title>
-<meta name="description" content="Explore project site inspection photos, quality control testing, railway concrete foundation checks, and solar power plant civil site execution photos by MD RAHIL SHAIKH.">
-<meta name="keywords" content="MD RAHIL SHAIKH Gallery, Civil Site Inspection Photos, Railway Quality Control Photos, Concrete Rebound Hammer Test Photos, Solar Foundation Execution">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://md-rahil-shaikh.vercel.app/gallery.html">
-
-<!-- Open Graph / Social Media Meta Tags -->
-<meta property="og:title" content="Project Gallery | MD RAHIL SHAIKH - Civil Quality & Site Engineering Fieldwork">
-<meta property="og:description" content="Explore site inspection photos, concrete quality testing, railway infra checks, and solar site execution photos.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://md-rahil-shaikh.vercel.app/gallery.html">
-<meta property="og:site_name" content="MD RAHIL SHAIKH Portfolio">
-
-<!-- Twitter Card Meta Tags -->
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Project Gallery | MD RAHIL SHAIKH - Civil Engineering Fieldwork">
-<meta name="twitter:description" content="Explore site inspection photos, concrete quality testing, railway infra checks, and solar site execution photos.">
-
-<!-- Structured Data (JSON-LD) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://md-rahil-shaikh.vercel.app/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Project Gallery",
-      "item": "https://md-rahil-shaikh.vercel.app/gallery.html"
-    }
-  ]
-}
-</script>
+<title>Gallery | Md Rahil Shaikh</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body data-nav="gallery">
+<body>
 
 <div id="navMount"></div>
 
-<!-- HERO HEADER FOR GALLERY PAGE -->
-<header class="section section-dark blueprint-bg" style="padding:60px 0 40px; border-bottom:2px solid var(--safety-orange);">
-  <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px;">
-    <div>
-      <span class="eyebrow">Site Visits & Field Work</span>
-      <h1 style="font-size:clamp(2rem, 4vw, 3.2rem); color:var(--white); margin-bottom:8px;">Project Gallery</h1>
-      <p style="color:var(--concrete-dark); font-size:1.05rem;">Explore quality control inspections, structural alignment, and site execution photos.</p>
-    </div>
-    <div>
-      <a href="index.html" class="btn btn-primary">← Back to Home</a>
-    </div>
+<header class="section blueprint-bg section-dark" style="padding:70px 0 50px;">
+  <div class="container reveal">
+    <span class="eyebrow">Site Visits & Work</span>
+    <h1 style="font-size:clamp(2rem,4vw,3rem); color:var(--white);">Gallery</h1>
+    <p style="color:var(--concrete-dark); margin-top:10px;">Kisi bhi image par click karke bada dekhein.</p>
   </div>
 </header>
 
-<!-- GALLERY GRID SECTION -->
-<main class="section section-light" style="min-height:60vh;">
+<section class="section section-light">
   <div class="container">
-    <div class="section-header reveal">
-      <span class="eyebrow">All Media</span>
-      <h2>Site Execution & Inspection Photos</h2>
-      <p style="color:var(--steel-light); margin-top:8px;">Click on any image to view in full resolution.</p>
-    </div>
-
-    <div class="gallery-grid" id="fullGalleryMount"></div>
+    <div class="gallery-grid" id="galleryMount"></div>
   </div>
-</main>
+</section>
 
-<!-- LIGHTBOX MODAL -->
+<!-- Lightbox -->
 <div class="lightbox" id="lightbox">
   <button class="lightbox-close" id="lightboxClose">&times;</button>
   <div class="lightbox-content">
-    <img id="lightboxImg" src="" alt="Site Image">
+    <img id="lightboxImg" src="" alt="">
     <p class="lightbox-caption" id="lightboxCaption"></p>
   </div>
 </div>
@@ -90,31 +39,29 @@
 <script src="js/main.js"></script>
 <script>
   const data = injectLayout();
-
-  const mount = document.getElementById("fullGalleryMount");
+  const mount = document.getElementById("galleryMount");
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightboxImg");
   const lightboxCaption = document.getElementById("lightboxCaption");
 
-  if (data.gallery && data.gallery.length) {
-    data.gallery.forEach((item) => {
-      const div = document.createElement("div");
-      div.className = "gallery-item reveal";
-      div.innerHTML = item.img
-        ? `<img src="${item.img}" alt="${item.title}" loading="lazy"><div class="gallery-caption">${item.title}</div>`
-        : `<div class="gallery-placeholder">📷 ${item.title}</div><div class="gallery-caption">${item.title}</div>`;
+  data.gallery.forEach((item) => {
+    const div = document.createElement("div");
+    div.className = "gallery-item reveal";
+    div.innerHTML = item.img
+      ? `<img src="${item.img}" alt="${item.title}"><div class="gallery-caption">${item.title}</div>`
+      : `<div class="gallery-placeholder">📷 ${item.title}</div><div class="gallery-caption">${item.title}</div>`;
 
-      div.addEventListener("click", () => {
-        if (!item.img) return;
-        lightboxImg.src = item.img;
-        lightboxCaption.textContent = item.title;
-        lightbox.classList.add("open");
-      });
-
-      mount.appendChild(div);
+    div.addEventListener("click", () => {
+      if (!item.img) return;
+      lightboxImg.src = item.img;
+      lightboxCaption.textContent = item.title;
+      lightbox.classList.add("open");
     });
-  } else {
-    mount.innerHTML = `<p style="color:var(--steel-light); grid-column:1/-1;">No photos uploaded yet. Manage photos via Admin Panel.</p>`;
+    mount.appendChild(div);
+  });
+
+  if (data.gallery.length === 0) {
+    mount.innerHTML = `<p style="color:var(--steel-light)">Abhi tak koi image add nahi hui. Admin panel se add karein.</p>`;
   }
 
   document.getElementById("lightboxClose").addEventListener("click", () => {
